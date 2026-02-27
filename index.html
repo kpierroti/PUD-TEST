@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PUD Santa Bárbara | Trilha Evolutiva</title>
+  <style>
+    :root{
+      --bg0:#070A12;
+      --bg1:#0B1022;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.09);
+      --stroke: rgba(255,255,255,.14);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --muted2: rgba(255,255,255,.52);
+
+      --blue:#3B82F6;
+      --cyan:#22D3EE;
+      --pink:#EC4899;
+      --violet:#8B5CF6;
+      --amber:#F59E0B;
+      --orange:#F97316;
+      --green:#22C55E;
+
+      --radius: 18px;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --shadow2: 0 10px 24px rgba(0,0,0,.30);
+    }
+
+    *{ box-sizing:border-box }
+    html,body{ height:100% }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 20% 15%, rgba(59,130,246,.22), transparent 60%),
+        radial-gradient(900px 600px at 80% 10%, rgba(236,72,153,.16), transparent 55%),
+        radial-gradient(900px 600px at 70% 85%, rgba(34,211,238,.12), transparent 55%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      overflow-x:hidden;
+    }
+
+    /* subtle grid */
+    .grid{
+      position:fixed; inset:0;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,.05) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(closest-side at 50% 20%, rgba(0,0,0,.9), transparent 70%);
+      pointer-events:none;
+      opacity:.55;
+    }
+
+    header{
+      position:sticky; top:0;
+      z-index:10;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(180deg, rgba(7,10,18,.82), rgba(7,10,18,.42));
+      border-bottom:1px solid rgba(255,255,255,.10);
+    }
+
+    .wrap{ max-width:1200px; margin:0 auto; padding:18px 18px 0 18px; }
+    .top{
+      display:flex; gap:14px; align-items:flex-start; justify-content:space-between;
+      padding:14px 0 12px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width:240px;
+    }
+    .logo{
+      width:40px; height:40px; border-radius:14px;
+      background:
+        radial-gradient(14px 14px at 30% 30%, rgba(255,255,255,.55), transparent 55%),
+        linear-gradient(135deg, rgba(59,130,246,.9), rgba(139,92,246,.9));
+      box-shadow: var(--shadow2);
+      border:1px solid rgba(255,255,255,.16);
+      flex: 0 0 auto;
+    }
+    .brand h1{
+      margin:0;
+      font-size:16px;
+      letter-spacing:.2px;
+      line-height:1.2;
+    }
+    .brand p{
+      margin:2px 0 0 0;
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    .controls{
+      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+      justify-content:flex-end;
+      width:100%;
+    }
+
+    .pillbar{
+      display:flex; gap:8px; flex-wrap:wrap; align-items:center;
+      background: rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+      padding:8px;
+      border-radius: 999px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.25);
+    }
+
+    .tab{
+      appearance:none;
+      border:1px solid transparent;
+      color: var(--muted);
+      background: transparent;
+      padding:10px 12px;
+      border-radius: 999px;
+      cursor:pointer;
+      font-size:13px;
+      transition: .18s ease;
+      display:flex; gap:8px; align-items:center;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .tab:hover{ color:var(--text); background: rgba(255,255,255,.06) }
+    .tab[aria-selected="true"]{
+      color:var(--text);
+      border-color: rgba(255,255,255,.14);
+      background: linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.05));
+      box-shadow: 0 10px 22px rgba(0,0,0,.22);
+    }
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background: rgba(255,255,255,.25);
+      box-shadow: 0 0 0 4px rgba(255,255,255,.06);
+    }
+
+    .field{
+      display:flex; gap:10px; flex-wrap:wrap;
+      align-items:center; justify-content:flex-end;
+    }
+    input[type="search"], select{
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.12);
+      color: var(--text);
+      border-radius: 14px;
+      padding:12px 12px;
+      outline:none;
+      min-width: 240px;
+      box-shadow: 0 10px 18px rgba(0,0,0,.22);
+    }
+    select{ min-width: 210px; cursor:pointer }
+    input[type="search"]::placeholder{ color: rgba(255,255,255,.45) }
+    option{ background: #0B1022; color: var(--text) }
+
+    main{ padding: 18px 0 50px 0; }
+    .hero{
+      padding: 14px 0 8px 0;
+      display:flex; gap:16px; align-items:flex-end; justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .hero h2{
+      margin:0;
+      font-size:22px;
+      letter-spacing:.2px;
+    }
+    .hero p{
+      margin:6px 0 0 0;
+      color: var(--muted);
+      max-width: 700px;
+      line-height:1.5;
+      font-size: 13.5px;
+    }
+
+    .legend{
+      display:flex; gap:10px; flex-wrap:wrap;
+      align-items:center; justify-content:flex-end;
+      color: var(--muted2);
+      font-size: 12px;
+    }
+    .badge{
+      display:flex; align-items:center; gap:8px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      padding:8px 10px;
+      border-radius: 999px;
+    }
+    .badge span{
+      width:10px; height:10px; border-radius:50%;
+      display:inline-block;
+    }
+
+    .gridcards{
+      margin-top: 16px;
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+
+    .areaCard{
+      grid-column: span 12;
+      border:1px solid rgba(255,255,255,.12);
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow2);
+      overflow:hidden;
+      position:relative;
+    }
+    @media(min-width: 920px){
+      .areaCard{ grid-column: span 6; }
+    }
+
+    .areaHeader{
+      padding: 16px 16px 10px 16px;
+      display:flex; justify-content:space-between; align-items:flex-start; gap:12px;
+    }
+    .areaTitle{
+      display:flex; align-items:center; gap:10px;
+      min-width: 0;
+    }
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      font-size: 12px;
+      white-space:nowrap;
+    }
+    .spark{
+      width:12px; height:12px; border-radius:4px;
+      background: rgba(255,255,255,.25);
+      box-shadow: 0 0 0 5px rgba(255,255,255,.06);
+    }
+    .areaHeader h3{
+      margin:0;
+      font-size: 15px;
+      letter-spacing:.2px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .meta{
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .roadmap{
+      padding: 0 16px 16px 16px;
+    }
+    .lane{
+      position:relative;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+      border-radius: 16px;
+      padding: 14px;
+      overflow:hidden;
+    }
+    .lane::before{
+      content:"";
+      position:absolute; inset:-40px -40px auto auto;
+      width: 240px; height: 240px;
+      border-radius: 50%;
+      filter: blur(0px);
+      opacity:.35;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.6), transparent 55%);
+      pointer-events:none;
+    }
+
+    .steps{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:stretch;
+    }
+    .step{
+      position:relative;
+      flex: 1 1 210px;
+      min-width: 210px;
+      border:1px solid rgba(255,255,255,.12);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      border-radius: 16px;
+      padding: 12px 12px 12px 12px;
+      cursor:pointer;
+      transition: .18s ease;
+      box-shadow: 0 12px 24px rgba(0,0,0,.18);
+    }
+    .step:hover{
+      transform: translateY(-2px);
+      border-color: rgba(255,255,255,.18);
+      box-shadow: 0 16px 34px rgba(0,0,0,.24);
+    }
+    .stepTop{
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+    }
+    .tag{
+      font-size: 11px;
+      padding: 6px 8px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      color: var(--muted);
+      white-space:nowrap;
+    }
+    .step h4{
+      margin:10px 0 6px 0;
+      font-size: 14px;
+      letter-spacing:.2px;
+      line-height:1.3;
+    }
+    .step p{
+      margin:0;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height:1.45;
+    }
+
+    .connector{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin: 12px 0 0 0;
+      color: var(--muted2);
+      font-size: 12px;
+    }
+    .line{
+      height: 2px;
+      background: rgba(255,255,255,.10);
+      flex: 1;
+      border-radius: 999px;
+      position:relative;
+      overflow:hidden;
+    }
+    .line::after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.28), transparent);
+      transform: translateX(-60%);
+      animation: sweep 2.6s linear infinite;
+      opacity:.6;
+    }
+    @keyframes sweep{
+      0%{ transform: translateX(-80%) }
+      100%{ transform: translateX(80%) }
+    }
+
+    /* modal */
+    dialog{
+      border:none;
+      padding:0;
+      border-radius: 22px;
+      width: min(720px, calc(100vw - 24px));
+      background: rgba(14,18,35,.82);
+      color: var(--text);
+      box-shadow: var(--shadow);
+      border:1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(14px);
+    }
+    dialog::backdrop{
+      background: rgba(0,0,0,.55);
+      backdrop-filter: blur(4px);
+    }
+    .modal{
+      padding: 18px 18px 16px 18px;
+    }
+    .modalHead{
+      display:flex; justify-content:space-between; gap:12px; align-items:flex-start;
+    }
+    .modal h3{
+      margin:0;
+      font-size: 16px;
+      letter-spacing:.2px;
+    }
+    .modal .sub{
+      margin:6px 0 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height:1.45;
+    }
+    .kv{
+      margin-top: 14px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:10px;
+    }
+    @media(min-width: 720px){
+      .kv{ grid-template-columns: 1fr 1fr; }
+    }
+    .kv .box{
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      border-radius: 16px;
+      padding: 12px;
+    }
+    .kv .k{
+      font-size: 11px;
+      color: var(--muted2);
+      letter-spacing:.14em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .kv .v{
+      font-size: 13px;
+      color: var(--text);
+      line-height:1.35;
+    }
+    .modalActions{
+      display:flex; gap:10px; justify-content:flex-end; margin-top: 14px;
+    }
+    .btn{
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 14px;
+      cursor:pointer;
+      font-size: 13px;
+      transition: .18s ease;
+    }
+    .btn:hover{ background: rgba(255,255,255,.10) }
+
+    footer{
+      color: var(--muted2);
+      font-size: 12px;
+      padding: 18px 0 26px 0;
+      border-top: 1px solid rgba(255,255,255,.10);
+      margin-top: 18px;
+    }
+
+    /* color accents per area */
+    .accent-audiovisual { --accent: var(--cyan); }
+    .accent-design      { --accent: var(--pink); }
+    .accent-prog        { --accent: var(--orange); }
+
+    .areaCard::after{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(700px 260px at 18% 0%, rgba(255,255,255,.10), transparent 60%);
+      pointer-events:none;
+      opacity:.55;
+    }
+    .areaCard .spark{ background: var(--accent); }
+    .areaCard .chip{ border-color: color-mix(in srgb, var(--accent) 35%, rgba(255,255,255,.12)); }
+    .areaCard .lane::before{
+      background: radial-gradient(circle at 30% 30%, color-mix(in srgb, var(--accent) 55%, rgba(255,255,255,.35)), transparent 58%);
+    }
+    .step[data-accent]{
+      outline: 1px solid transparent;
+    }
+    .step[data-accent] .tag{
+      border-color: color-mix(in srgb, var(--accent) 35%, rgba(255,255,255,.12));
+    }
+
+    /* empty state */
+    .empty{
+      margin-top: 18px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      border-radius: var(--radius);
+      padding: 16px;
+      color: var(--muted);
+      line-height:1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid" aria-hidden="true"></div>
+
+  <header>
+    <div class="wrap">
+      <div class="top">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <h1>PUD Santa Bárbara</h1>
+            <p>Trilha evolutiva de cursos por faixa etária</p>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="pillbar" role="tablist" aria-label="Faixas etárias">
+            <button class="tab" role="tab" aria-selected="true" data-track="criancas">
+              <span class="dot" style="background: var(--blue)"></span>
+              Crianças
+            </button>
+            <button class="tab" role="tab" aria-selected="false" data-track="jovens_adultos">
+              <span class="dot" style="background: var(--violet)"></span>
+              Jovens e Adultos
+            </button>
+            <button class="tab" role="tab" aria-selected="false" data-track="seniors">
+              <span class="dot" style="background: var(--amber)"></span>
+              Seniors
+            </button>
+            <button class="tab" role="tab" aria-selected="false" data-track="nivelamento">
+              <span class="dot" style="background: var(--pink)"></span>
+              Nivelamento
+            </button>
+          </div>
+
+          <div class="field">
+            <input id="q" type="search" placeholder="Buscar curso (ex.: fotografia, python, adobe)" />
+            <select id="area">
+              <option value="all">Todas as áreas</option>
+              <option value="audiovisual">Audiovisual</option>
+              <option value="design">Design e Marketing</option>
+              <option value="prog">Programação e Games</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero">
+        <div>
+          <h2 id="headline">Crianças</h2>
+          <p id="subline">
+            Navegue pela trilha: selecione a faixa etária, filtre por área e clique em um curso para abrir detalhes.
+          </p>
+        </div>
+        <div class="legend" aria-label="Legenda de áreas">
+          <div class="badge"><span style="background: var(--cyan)"></span>Audiovisual</div>
+          <div class="badge"><span style="background: var(--pink)"></span>Design e Marketing</div>
+          <div class="badge"><span style="background: var(--orange)"></span>Programação e Games</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="content" class="gridcards" aria-live="polite"></section>
+
+    <div id="empty" class="empty" hidden>
+      Nenhum curso encontrado com os filtros atuais. Tente remover a busca ou trocar a área.
+    </div>
+
+    <footer>
+      Dica: você pode editar os textos dos cursos no objeto <strong>DATA</strong> dentro do arquivo e acrescentar descrições, carga horária, dias e pré-requisitos.
+    </footer>
+  </main>
+
+  <dialog id="dlg">
+    <div class="modal">
+      <div class="modalHead">
+        <div>
+          <h3 id="mTitle">Curso</h3>
+          <p class="sub" id="mSub">Detalhes do curso</p>
+        </div>
+        <button class="btn" id="closeBtn" aria-label="Fechar">Fechar</button>
+      </div>
+
+      <div class="kv">
+        <div class="box">
+          <div class="k">Faixa</div>
+          <div class="v" id="mTrack">—</div>
+        </div>
+        <div class="box">
+          <div class="k">Área</div>
+          <div class="v" id="mArea">—</div>
+        </div>
+        <div class="box">
+          <div class="k">Trilha</div>
+          <div class="v" id="mLane">—</div>
+        </div>
+        <div class="box">
+          <div class="k">Observações</div>
+          <div class="v" id="mObs">Você pode preencher descrições reais depois.</div>
+        </div>
+      </div>
+
+      <div class="modalActions">
+        <button class="btn" id="copyBtn">Copiar nome do curso</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    // Dados baseados no seu mapa. (Sem emojis e fácil de editar)
+    const DATA = {
+      criancas: {
+        label: "Crianças",
+        description: "Trilhas pensadas para introdução criativa e desenvolvimento de habilidades.",
+        areas: {
+          audiovisual: {
+            label: "Audiovisual",
+            accentClass: "accent-audiovisual",
+            lanes: [
+              {
+                label: "Animação e criação",
+                steps: [
+                  { title: "Stopmotion", note: "Introdução prática à animação quadro a quadro." }
+                ]
+              }
+            ]
+          },
+          design: {
+            label: "Design e Marketing",
+            accentClass: "accent-design",
+            lanes: [
+              {
+                label: "Criação visual",
+                steps: [
+                  { title: "Ilustração Digital", note: "Desenho e composição em ambiente digital." },
+                  { title: "Criação 3D", note: "Modelagem e criação tridimensional introdutória." }
+                ]
+              }
+            ]
+          },
+          prog: {
+            label: "Programação e Games",
+            accentClass: "accent-prog",
+            lanes: [
+              {
+                label: "Fundamentos e robótica",
+                steps: [
+                  { title: "Lógica de Programação", note: "Base para pensamento computacional." },
+                  { title: "Robótica com Arduino", note: "Exploração prática de sensores e automação." },
+                  { title: "Robótica para o OBR", note: "Preparação e projetos orientados a desafios." }
+                ]
+              },
+              {
+                label: "Criação de jogos",
+                steps: [
+                  { title: "Universo Roblox", note: "Criação e experimentação em plataforma de jogos." }
+                ]
+              }
+            ]
+          }
+        }
+      },
+
+      jovens_adultos: {
+        label: "Jovens e Adultos",
+        description: "Trilhas para aprofundamento técnico, portfólio e projetos aplicados.",
+        areas: {
+          audiovisual: {
+            label: "Audiovisual",
+            accentClass: "accent-audiovisual",
+            lanes: [
+              {
+                label: "Cinema (sequência por módulos)",
+                steps: [
+                  { title: "Fundamentos do Cinema Módulo 1", note: "Introdução ao audiovisual e linguagem." },
+                  { title: "Fundamentos do Cinema Módulo 2", note: "Aprofundamento em narrativa e prática." },
+                  { title: "Fundamentos do Cinema Módulo 3", note: "Projeto e consolidação de técnicas." }
+                ]
+              },
+              {
+                label: "Fotografia (progressão por níveis)",
+                steps: [
+                  { title: "Fotografia em Estúdio 1", note: "Luz básica, enquadramento e prática." },
+                  { title: "Fotografia em Estúdio 2", note: "Controle de luz e direção." },
+                  { title: "Fotografia em Estúdio 3", note: "Ensaios e resultados avançados." },
+                  { title: "Fotografia Externa", note: "Luz natural, locação e narrativa visual." }
+                ]
+              },
+              {
+                label: "Set e operação",
+                steps: [
+                  { title: "Assistente de Câmera", note: "Rotina de set, apoio e organização técnica." }
+                ]
+              }
+            ]
+          },
+
+          design: {
+            label: "Design e Marketing",
+            accentClass: "accent-design",
+            lanes: [
+              {
+                label: "Pacote Adobe (trilha por ferramentas)",
+                steps: [
+                  { title: "Pacote Adobe - Illustrator", note: "Vetores, identidade visual e layout." },
+                  { title: "Pacote Adobe - Photoshop", note: "Edição, composição e tratamento." },
+                  { title: "Pacote Adobe - InDesign", note: "Diagramação e materiais editoriais." },
+                  { title: "Pacote Adobe - Lightroom", note: "Fluxo de edição e organização fotográfica." }
+                ]
+              }
+            ]
+          },
+
+          prog: {
+            label: "Programação e Games",
+            accentClass: "accent-prog",
+            lanes: [
+              {
+                label: "Criação de jogos (do conceito ao produto)",
+                steps: [
+                  { title: "Narrativas RPG", note: "Construção de mundos, personagens e progressão." },
+                  { title: "Construção de Jogo de Tabuleiro", note: "Mecânicas, regras e prototipagem." },
+                  { title: "Construção de Jogos para Celulares", note: "Design e desenvolvimento para mobile." }
+                ]
+              },
+              {
+                label: "Dados e ferramentas",
+                steps: [
+                  { title: "Análise de Dados com Python Módulo 1", note: "Introdução a dados com Python." },
+                  { title: "Análise de Dados com Python Módulo 2", note: "Aprofundamento e prática aplicada." },
+                  { title: "Universo das API's", note: "Integrações e consumo de dados." },
+                  { title: "PowerBI", note: "Dashboards e visualização de dados." }
+                ]
+              }
+            ]
+          }
+        }
+      },
+
+      seniors: {
+        label: "Seniors",
+        description: "Espaço reservado para trilhas específicas. Você pode preencher os cursos aqui.",
+        areas: {
+          audiovisual: { label: "Audiovisual", accentClass:"accent-audiovisual", lanes: [] },
+          design:      { label: "Design e Marketing", accentClass:"accent-design", lanes: [] },
+          prog:        { label: "Programação e Games", accentClass:"accent-prog", lanes: [] }
+        }
+      },
+
+      nivelamento: {
+        label: "Nivelamento",
+        description: "Cursos de entrada e revisão para preparar participantes para trilhas avançadas.",
+        areas: {
+          audiovisual: { label: "Audiovisual", accentClass:"accent-audiovisual", lanes: [] },
+          design:      { label: "Design e Marketing", accentClass:"accent-design", lanes: [] },
+          prog:        { label: "Programação e Games", accentClass:"accent-prog", lanes: [] }
+        }
+      }
+    };
+
+    const AREA_LABEL = {
+      audiovisual: "Audiovisual",
+      design: "Design e Marketing",
+      prog: "Programação e Games"
+    };
+
+    const $ = (s, root=document) => root.querySelector(s);
+    const $$ = (s, root=document) => Array.from(root.querySelectorAll(s));
+
+    const state = {
+      track: "criancas",
+      area: "all",
+      q: ""
+    };
+
+    function normalize(str){
+      return (str || "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .trim();
+    }
+
+    function getFiltered(){
+      const trackObj = DATA[state.track];
+      const qn = normalize(state.q);
+      const results = [];
+
+      for(const [areaKey, areaObj] of Object.entries(trackObj.areas)){
+        if(state.area !== "all" && state.area !== areaKey) continue;
+
+        const lanes = (areaObj.lanes || []).map(l => {
+          const steps = (l.steps || []).filter(step => {
+            if(!qn) return true;
+            const hay = normalize(step.title + " " + (step.note || ""));
+            return hay.includes(qn);
+          });
+          return { ...l, steps };
+        }).filter(l => (l.steps || []).length > 0);
+
+        if(lanes.length > 0){
+          results.push({ areaKey, areaObj, lanes });
+        }
+      }
+
+      return results;
+    }
+
+    function render(){
+      const trackObj = DATA[state.track];
+      $("#headline").textContent = trackObj.label;
+      $("#subline").textContent = trackObj.description;
+
+      const content = $("#content");
+      content.innerHTML = "";
+
+      const filtered = getFiltered();
+      $("#empty").hidden = filtered.length !== 0;
+
+      filtered.forEach(({areaKey, areaObj, lanes}) => {
+        const card = document.createElement("article");
+        card.className = `areaCard ${areaObj.accentClass || ""}`;
+        card.style.setProperty("--accent", areaKey === "audiovisual" ? "var(--cyan)" : areaKey === "design" ? "var(--pink)" : "var(--orange)");
+
+        const laneCount = lanes.length;
+        const stepCount = lanes.reduce((acc, l) => acc + (l.steps?.length || 0), 0);
+
+        card.innerHTML = `
+          <div class="areaHeader">
+            <div class="areaTitle">
+              <span class="spark" aria-hidden="true"></span>
+              <div style="min-width:0">
+                <h3>${areaObj.label}</h3>
+                <div class="meta">${laneCount} trilha(s) • ${stepCount} curso(s)</div>
+              </div>
+            </div>
+            <span class="chip">
+              <span aria-hidden="true" style="width:8px;height:8px;border-radius:999px;background:var(--accent);display:inline-block"></span>
+              ${trackObj.label}
+            </span>
+          </div>
+          <div class="roadmap"></div>
+        `;
+
+        const roadmap = $(".roadmap", card);
+
+        lanes.forEach((lane, laneIndex) => {
+          const laneBox = document.createElement("div");
+          laneBox.className = "lane";
+          laneBox.style.marginTop = laneIndex === 0 ? "0" : "12px";
+
+          const header = document.createElement("div");
+          header.className = "connector";
+          header.innerHTML = `
+            <div style="white-space:nowrap;"><strong style="color:var(--text)">${lane.label}</strong></div>
+            <div class="line" aria-hidden="true"></div>
+            <div style="white-space:nowrap;">sequência sugerida</div>
+          `;
+          laneBox.appendChild(header);
+
+          const steps = document.createElement("div");
+          steps.className = "steps";
+
+          lane.steps.forEach((step, i) => {
+            const el = document.createElement("div");
+            el.className = "step";
+            el.dataset.accent = "1";
+            el.style.setProperty("--accent", areaKey === "audiovisual" ? "var(--cyan)" : areaKey === "design" ? "var(--pink)" : "var(--orange)");
+            el.innerHTML = `
+              <div class="stepTop">
+                <span class="tag">${AREA_LABEL[areaKey]}</span>
+                <span class="tag">Etapa ${i + 1}</span>
+              </div>
+              <h4>${step.title}</h4>
+              <p>${step.note || "Clique para ver detalhes e editar descrições."}</p>
+            `;
+            el.addEventListener("click", () => openModal({
+              title: step.title,
+              note: step.note,
+              track: trackObj.label,
+              area: AREA_LABEL[areaKey],
+              lane: lane.label
+            }));
+            steps.appendChild(el);
+          });
+
+          laneBox.appendChild(steps);
+          roadmap.appendChild(laneBox);
+        });
+
+        content.appendChild(card);
+      });
+    }
+
+    function openModal({title, note, track, area, lane}){
+      $("#mTitle").textContent = title;
+      $("#mSub").textContent = note || "Você pode preencher uma descrição completa depois.";
+      $("#mTrack").textContent = track;
+      $("#mArea").textContent = area;
+      $("#mLane").textContent = lane;
+      $("#mObs").textContent = "Dica: inclua aqui objetivos, carga horária, pré-requisitos, materiais e formato.";
+
+      const dlg = $("#dlg");
+      if(typeof dlg.showModal === "function") dlg.showModal();
+      else alert(title); // fallback antigo
+    }
+
+    function setTrack(track){
+      state.track = track;
+
+      $$(".tab").forEach(btn => {
+        const active = btn.dataset.track === track;
+        btn.setAttribute("aria-selected", active ? "true" : "false");
+      });
+
+      // quando trocar faixa, mantém filtros mas você pode preferir resetar
+      render();
+    }
+
+    // events
+    $$(".tab").forEach(btn => {
+      btn.addEventListener("click", () => setTrack(btn.dataset.track));
+    });
+
+    $("#q").addEventListener("input", (e) => {
+      state.q = e.target.value || "";
+      render();
+    });
+
+    $("#area").addEventListener("change", (e) => {
+      state.area = e.target.value;
+      render();
+    });
+
+    $("#closeBtn").addEventListener("click", () => $("#dlg").close());
+    $("#dlg").addEventListener("click", (e) => {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const inDialog =
+        rect.top <= e.clientY && e.clientY <= rect.bottom &&
+        rect.left <= e.clientX && e.clientX <= rect.right;
+      if(!inDialog) e.currentTarget.close();
+    });
+
+    $("#copyBtn").addEventListener("click", async () => {
+      const text = $("#mTitle").textContent || "";
+      try{
+        await navigator.clipboard.writeText(text);
+        $("#copyBtn").textContent = "Copiado";
+        setTimeout(() => $("#copyBtn").textContent = "Copiar nome do curso", 1200);
+      }catch{
+        // fallback
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+      }
+    });
+
+    // init
+    render();
+  </script>
+</body>
+</html>
