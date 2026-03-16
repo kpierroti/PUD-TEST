@@ -1,123 +1,197 @@
 <!doctype html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>PUD Santa Bárbara | Trilha Evolutiva</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>PUD Santa Bárbara | Trilha Evolutiva</title>
 
-  <link rel="stylesheet" href="./styles.css" />
+<link rel="stylesheet" href="./styles.css" />
 </head>
+
 <body>
-  <div class="grid" aria-hidden="true"></div>
 
-  <header>
-    <div class="wrap">
-      <div class="top">
-        <div class="brand">
-          <div class="logo" aria-hidden="true"></div>
-          <div>
-            <h1>PUD Santa Bárbara</h1>
-            <p>Trilha evolutiva de cursos por faixa etária</p>
-          </div>
-        </div>
+<div class="grid" aria-hidden="true"></div>
 
-        <div class="controls">
-          <div class="pillbar" role="tablist" aria-label="Faixas etárias">
-            <button class="tab" role="tab" aria-selected="true" data-track="criancas">
-              <span class="dot dot-blue"></span>
-              Crianças
-            </button>
-            <button class="tab" role="tab" aria-selected="false" data-track="jovens_adultos">
-              <span class="dot dot-violet"></span>
-              Jovens e Adultos
-            </button>
-            <button class="tab" role="tab" aria-selected="false" data-track="seniors">
-              <span class="dot dot-amber"></span>
-              Seniors
-            </button>
-            <button class="tab" role="tab" aria-selected="false" data-track="nivelamento">
-              <span class="dot dot-pink"></span>
-              Nivelamento
-            </button>
-          </div>
+<header>
+<div class="wrap">
 
-          <div class="field">
-            <input id="q" type="search" placeholder="Buscar curso (ex.: fotografia, python, adobe)" />
-            <select id="area">
-              <option value="all">Todas as áreas</option>
-              <option value="audiovisual">Audiovisual</option>
-              <option value="design">Design e Marketing</option>
-              <option value="prog">Programação e Games</option>
-            </select>
-          </div>
-        </div>
-      </div>
+<div class="top">
 
-      <div class="hero">
-        <div>
-          <h2 id="headline">Crianças</h2>
-          <p id="subline">
-            Navegue pela trilha: selecione a faixa etária, filtre por área e clique em um curso para abrir detalhes.
-          </p>
-        </div>
+<div class="brand">
+<div class="logo"></div>
 
-        <div class="legend" aria-label="Legenda de áreas">
-          <div class="badge"><span class="lg lg-cyan"></span>Audiovisual</div>
-          <div class="badge"><span class="lg lg-pink"></span>Design e Marketing</div>
-          <div class="badge"><span class="lg lg-orange"></span>Programação e Games</div>
-        </div>
-      </div>
-    </div>
-  </header>
+<div>
+<h1>PUD Santa Bárbara</h1>
+<p>Trilha evolutiva de cursos por faixa etária</p>
+</div>
+</div>
 
-  <main class="wrap">
-    <section id="content" class="gridcards" aria-live="polite"></section>
+<div class="controls">
 
-    <div id="empty" class="empty" hidden>
-      Nenhum curso encontrado com os filtros atuais. Tente remover a busca ou trocar a área.
-    </div>
+<div class="pillbar" role="tablist">
 
-    <footer>
-      Dica: edite o arquivo <strong>data.js</strong> para ajustar nomes, notas e trilhas.
-    </footer>
-  </main>
+<button class="tab" data-track="criancas" aria-selected="true">
+<span class="dot dot-blue"></span>
+Crianças
+</button>
 
-  <dialog id="dlg">
-    <div class="modal">
-      <div class="modalHead">
-        <div>
-          <h3 id="mTitle">Curso</h3>
-          <p class="sub" id="mSub">Detalhes do curso</p>
-        </div>
-        <button class="btn" id="closeBtn" aria-label="Fechar">Fechar</button>
-      </div>
+<button class="tab" data-track="jovens_adultos">
+<span class="dot dot-violet"></span>
+Jovens e Adultos
+</button>
 
-      <div class="kv">
-        <div class="box">
-          <div class="k">Faixa</div>
-          <div class="v" id="mTrack">—</div>
-        </div>
-        <div class="box">
-          <div class="k">Área</div>
-          <div class="v" id="mArea">—</div>
-        </div>
-        <div class="box">
-          <div class="k">Trilha</div>
-          <div class="v" id="mLane">—</div>
-        </div>
-        <div class="box">
-          <div class="k">Observações</div>
-          <div class="v" id="mObs">Você pode preencher descrições reais depois.</div>
-        </div>
-      </div>
+<button class="tab" data-track="seniors">
+<span class="dot dot-amber"></span>
+Seniors
+</button>
 
-      <div class="modalActions">
-        <button class="btn" id="copyBtn">Copiar nome do curso</button>
-      </div>
-    </div>
-  </dialog>
+<button class="tab" data-track="nivelamento">
+<span class="dot dot-pink"></span>
+Nivelamento
+</button>
 
-  <script src="./data.js"></script>
-  <script src="./app.js"></script>
+</div>
+
+<div class="field">
+
+<input id="q" type="search"
+placeholder="Buscar curso (ex.: fotografia, python, adobe)" />
+
+<select id="area">
+<option value="all">Todas as áreas</option>
+<option value="audiovisual">Audiovisual</option>
+<option value="design">Design e Marketing</option>
+<option value="prog">Programação e Games</option>
+<option value="eco">Economia Criativa</option>
+<option value="niv">Nivelamento</option>
+</select>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero">
+
+<div>
+<h2 id="headline">Crianças</h2>
+<p id="subline">
+Selecione a faixa etária, filtre por área ou busque cursos.
+</p>
+</div>
+
+<div class="legend">
+
+<div class="badge">
+<span class="lg lg-cyan"></span>
+Audiovisual
+</div>
+
+<div class="badge">
+<span class="lg lg-pink"></span>
+Design e Marketing
+</div>
+
+<div class="badge">
+<span class="lg lg-orange"></span>
+Programação e Games
+</div>
+
+</div>
+
+</div>
+
+</div>
+</header>
+
+<main class="wrap">
+
+<section id="content" class="gridcards"></section>
+
+<div id="empty" class="empty" hidden>
+Nenhum curso encontrado com os filtros atuais.
+</div>
+
+<footer>
+Edite os cursos no arquivo <strong>data.js</strong>.
+</footer>
+
+</main>
+
+<!-- MODAL -->
+
+<dialog id="dlg">
+
+<div class="modal">
+
+<div class="modalHead">
+
+<div>
+<h3 id="mTitle"></h3>
+<p class="sub" id="mSub"></p>
+</div>
+
+<button class="btn" id="closeBtn">Fechar</button>
+
+</div>
+
+<div class="kv">
+
+<div class="box">
+<div class="k">Faixa</div>
+<div class="v" id="mTrack"></div>
+</div>
+
+<div class="box">
+<div class="k">Área</div>
+<div class="v" id="mArea"></div>
+</div>
+
+<div class="box">
+<div class="k">Trilha</div>
+<div class="v" id="mLane"></div>
+</div>
+
+<div class="box">
+<div class="k">Carga horária</div>
+<div class="v" id="mCarga"></div>
+</div>
+
+<div class="box">
+<div class="k">Data</div>
+<div class="v" id="mDatas"></div>
+</div>
+
+<div class="box">
+<div class="k">Horário</div>
+<div class="v" id="mHorario"></div>
+</div>
+
+<div class="box">
+<div class="k">Formato</div>
+<div class="v" id="mFormato"></div>
+</div>
+
+<div class="box full">
+<div class="k">Descrição</div>
+<div class="v" id="mObs"></div>
+</div>
+
+</div>
+
+<div class="modalActions">
+<button class="btn" id="copyBtn">
+Copiar nome do curso
+</button>
+</div>
+
+</div>
+
+</dialog>
+
+<script src="./data.js"></script>
+<script src="./app.js"></script>
+
 </body>
 </html>
