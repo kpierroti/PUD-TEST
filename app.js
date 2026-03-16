@@ -168,8 +168,7 @@
           `;
           el.addEventListener("click", () =>
             openModal({
-              title: step.title,
-              note: step.note,
+              step,
               track: trackObj.label,
               area: AREA_LABEL[areaKey],
               lane: lane.label
