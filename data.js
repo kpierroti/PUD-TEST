@@ -1,158 +1,1724 @@
-// data.js
-// Edite aqui: nomes de cursos, notas e trilhas.
+// Gerado pela Tela de Cadastro PUD
 
 window.PUD_DATA = {
-  criancas: {
-    label: "Crianças",
-    description: "Trilhas pensadas para introdução criativa e desenvolvimento de habilidades.",
-    areas: {
-      audiovisual: {
-        label: "Audiovisual",
-        accentClass: "accent-audiovisual",
-        lanes: [
+  "criancas": {
+    "label": "Crianças",
+    "description": "Trilhas pensadas para introdução criativa e desenvolvimento de habilidades.",
+    "areas": {
+      "audiovisual": {
+        "label": "Audiovisual",
+        "accentClass": "accent-audiovisual",
+        "lanes": []
+      },
+      "design": {
+        "label": "Design e Marketing",
+        "accentClass": "accent-design",
+        "lanes": [
           {
-            label: "Animação e criação",
-            steps: [
-              { title: "Stopmotion", note: "Introdução prática à animação quadro a quadro." }
+            "label": "Miniaturas em 3D",
+            "steps": [
+              {
+                "title": "Miniaturas em 3D no Blender: Introdução à Modelagem  de Objetos",
+                "note": "Este curso introdutório apresenta os fundamentos da modelagem\ntridimensional utilizando o software Blender, uma das ferramentas mais\nutilizadas no mundo para criação de objetos digitais, animação e design 3D.\nAo longo das aulas, os participantes aprendem a navegar no ambiente do\nsoftware, compreender os princípios da modelagem tridimensional e utilizar\nferramentas básicas de criação e edição de objetos.\nA proposta pedagógica é orientada por projetos práticos: em cada aula os\nestudantes desenvolvem uma pequena miniatura 3D, permitindo que\nexperimentem diferentes ferramentas e técnicas de modelagem enquanto\nconstroem objetos progressivamente mais complexos.\nDurante o percurso, serão explorados conceitos como transformação de\nobjetos, extrusão, escala, edição de malhas e organização de elementos no\nespaço tridimensional.\n\nAo final do curso, os participantes terão desenvolvido uma pequena coleção de\nminiaturas digitais, consolidando o aprendizado das ferramentas fundamentais\ndo Blender.",
+                "meta": {
+                  "objetivos": [
+                    "Introduzir os fundamentos da modelagem 3D utilizando Blender, permitindo que",
+                    "os participantes criem objetos simples e compreendam o funcionamento básico",
+                    "da modelagem tridimensional.",
+                    "Objetivos Específicos",
+                    "● Compreender a interface e navegação do Blender.",
+                    "● Aprender ferramentas básicas de modelagem 3D.",
+                    "● Desenvolver habilidades de criação de objetos simples.",
+                    "● Explorar transformações e edição de malhas.",
+                    "● Construir miniaturas tridimensionais progressivamente mais complexas."
+                  ],
+                  "carga_horaria": "27 horas",
+                  "pre_requisitos": [
+                    "Não há pré-requisitos. Indicado para iniciantes."
+                  ],
+                  "conteudo_programatico": [
+                    "Aula 1 – Primeiros Passos no Blender",
+                    "Projeto: Dado simples",
+                    "Tema: Interface e navegação",
+                    "Conceito a ser apresentado:",
+                    "Interface do Blender, navegação no espaço 3D e transformação básica de",
+                    "objetos.",
+                    "Atividade realizada:",
+                    "Criação de um dado simples utilizando cubos e transformações.",
+                    "Aplicação no mercado de trabalho:",
+                    "Introdução à modelagem utilizada em design, animação e games.",
+                    "Contexto na vida do estudante: Primeiro contato com ambientes",
+                    "tridimensionais.",
+                    "Meta: Compreender como navegar e manipular objetos no Blender.",
+                    "Bônus: Aplicação de material simples no objeto.",
+                    "Aula 2 – Transformações e Proporções",
+                    "Projeto: Copo",
+                    "Tema: Escala e proporção",
+                    "Conceito a ser apresentado: Ferramentas de escala, rotação e",
+                    "posicionamento.",
+                    "Atividade realizada: Modelagem de um copo simples.",
+                    "Aplicação no mercado de trabalho: Criação de objetos para cenários e",
+                    "visualizações.",
+                    "Contexto na vida do estudante: Objetos presentes no cotidiano.",
+                    "Meta: Controlar proporções e transformações de objetos.",
+                    "Bônus: Aplicação de cores básicas.",
+                    "Aula 3 – Introdução à Edição de Malha",
+                    "Projeto: Caixa com tampa",
+                    "Tema: Edit Mode",
+                    "Conceito a ser apresentado:",
+                    "Uso de vértices, arestas e faces.",
+                    "Atividade realizada: Modelagem de uma caixa simples com tampa.",
+                    "Aplicação no mercado de trabalho: Modelagem de objetos para design e",
+                    "produtos.",
+                    "Contexto na vida do estudante: Embalagens e objetos do cotidiano.",
+                    "Meta: Compreender a estrutura de malha.",
+                    "Bônus: Organização de objetos na cena.",
+                    "Aula 4 – Extrusão de Formas",
+                    "Projeto: Caneca",
+                    "Tema: Ferramenta Extrude",
+                    "Conceito a ser apresentado: Criação de formas a partir de extrusão.",
+                    "Atividade realizada: Modelagem de uma caneca com alça.",
+                    "Aplicação no mercado de trabalho: Design de objetos tridimensionais.",
+                    "Contexto na vida do estudante: Objetos domésticos.",
+                    "Meta: Aprender a extrudar e criar formas complexas.",
+                    "Bônus: Suavização da superfície.",
+                    "Aula 5 – Simetria e Modelagem",
+                    "Projeto: Mini vaso",
+                    "Tema: Simetria na modelagem",
+                    "Conceito a ser apresentado: Uso de ferramentas de simetria e duplicação.",
+                    "Atividade realizada: Modelagem de um pequeno vaso decorativo.",
+                    "Aplicação no mercado de trabalho: Design de objetos e cenografia.",
+                    "Contexto na vida do estudante: Objetos decorativos.",
+                    "Meta: Criar objetos simétricos.",
+                    "Bônus: Aplicação de materiais simples.",
+                    "Aula 6 – Detalhamento de Objetos",
+                    "Projeto: Livro",
+                    "Tema: Detalhamento de formas",
+                    "Conceito a ser apresentado: Inset e pequenos ajustes de superfície.",
+                    "Atividade realizada: Modelagem de um livro com capa e páginas.",
+                    "Aplicação no mercado de trabalho: Modelagem para cenários e animações.",
+                    "Contexto na vida do estudante: Objetos presentes no ambiente escolar.",
+                    "Meta: Adicionar detalhes simples em objetos.",
+                    "Bônus: Criação de pequenos relevos.",
+                    "Aula 7 – Composição de Objetos",
+                    "Projeto: Mesa simples",
+                    "Tema: Construção por partes",
+                    "Conceito a ser apresentado: Modelagem a partir da combinação de objetos.",
+                    "Atividade realizada: Modelagem de uma pequena mesa.",
+                    "Aplicação no mercado de trabalho: Design de cenários e mobiliário digital.",
+                    "Contexto na vida do estudante: Objetos presentes em salas e casas.",
+                    "Meta: Criar objetos a partir da combinação de partes.",
+                    "Bônus: Organização da cena.",
+                    "Aula 8 – Pequeno Cenário",
+                    "Projeto: Estante com objetos",
+                    "Tema: Organização de cena",
+                    "Conceito a ser apresentado: Composição de múltiplos objetos.",
+                    "Atividade realizada: Construção de uma pequena estante com miniaturas.",
+                    "Aplicação no mercado de trabalho: Cenografia digital e ambientes 3D.",
+                    "Contexto na vida do estudante: Organização de objetos no espaço.",
+                    "Meta: Compor uma pequena cena tridimensional.",
+                    "Bônus: Aplicação de iluminação simples.",
+                    "Aula 9 – Projeto Final",
+                    "Projeto: Coleção de miniaturas",
+                    "Tema: Integração das ferramentas",
+                    "Conceito a ser apresentado: Uso integrado das ferramentas de modelagem.",
+                    "Atividade realizada: Criação de uma pequena coleção de miniaturas.",
+                    "Aplicação no mercado de trabalho: Design 3D, jogos e impressão 3D.",
+                    "Contexto na vida do estudante: Produção criativa de objetos digitais.",
+                    "Meta: Consolidar os conhecimentos do curso.",
+                    "Bônus: Preparação do modelo para renderização ou impressão 3D."
+                  ],
+                  "dias_da_semana": [
+                    "seg",
+                    "qua"
+                  ],
+                  "data_inicio": "2026-04-01",
+                  "data_final": "2026-04-29",
+                  "horario_inicio": "15:30",
+                  "horario_final": "18:30",
+                  "materiais": [
+                    "Notebook, impressora 3D"
+                  ],
+                  "formato": "Curso Presencial"
+                }
+              }
             ]
           }
         ]
       },
-      design: {
-        label: "Design e Marketing",
-        accentClass: "accent-design",
-        lanes: [
+      "prog": {
+        "label": "Programação e Games",
+        "accentClass": "accent-prog",
+        "lanes": [
           {
-            label: "Criação visual",
-            steps: [
-              { title: "Ilustração Digital", note: "Desenho e composição em ambiente digital." },
-              { title: "Criação 3D", note: "Modelagem e criação tridimensional introdutória." }
-            ]
-          }
-        ]
-      },
-      prog: {
-        label: "Programação e Games",
-        accentClass: "accent-prog",
-        lanes: [
-          {
-            label: "Fundamentos e robótica",
-            steps: [
-              { title: "Lógica de Programação", note: "Base para pensamento computacional." },
-              { title: "Robótica com Arduino", note: "Exploração prática de sensores e automação." },
-              { title: "Robótica para o OBR", note: "Preparação e projetos orientados a desafios." }
+            "label": "Montagem de Robôs",
+            "steps": [
+              {
+                "title": "Engenharia e Montagem de Robôs",
+                "note": "O Módulo I aprofunda a formação em robótica educacional com foco na\nengenharia e na montagem de robôs móveis.\nDurante os encontros, os participantes exploram diferentes formas de construir\nrobôs mais estáveis, eficientes e adaptados aos desafios da Olimpíada\nBrasileira de Robótica (OBR). A oficina enfatiza aspectos mecânicos, como\nestrutura, posicionamento de sensores, alinhamento de rodas e distribuição de\npeso.\nOs estudantes também experimentam diferentes configurações de robôs,\ntestando como pequenas mudanças na montagem podem impactar\ndiretamente no desempenho em percursos e obstáculos.\nA programação é utilizada apenas de forma complementar, por meio de\nprogramação em blocos, para permitir que os robôs executem movimentos\nbásicos e respondam aos sensores.",
+                "meta": {
+                  "objetivos": [
+                    "."
+                  ],
+                  "carga_horaria": "12 horas (3 encontros de 2horas e 30 minutos)",
+                  "pre_requisitos": [
+                    "Conhecimentos básicos de robótica educacional."
+                  ],
+                  "conteudo_programatico": [
+                    "Aula 1 – Estrutura e Arquitetura do Robô",
+                    "Tema: Construindo um robô eficiente",
+                    "Conceito a ser apresentado: Estrutura básica de robôs móveis, tipos de",
+                    "montagem e posicionamento de componentes.",
+                    "Atividade realizada: Montagem de diferentes estruturas de robôs móveis.",
+                    "Aplicação no mercado de trabalho: Engenharia mecânica, prototipagem e",
+                    "robótica aplicada.",
+                    "Contexto na vida do estudante: Construção de máquinas e experimentação",
+                    "tecnológica.",
+                    "Meta: Compreender como a estrutura influencia o desempenho do robô.",
+                    "Bônus: Comparação entre diferentes tipos de chassis.",
+                    "Aula 2 – Rodas, Motores e Controle de Movimento",
+                    "Tema: Mecânica do deslocamento",
+                    "Conceito a ser apresentado: Tipos de rodas, posicionamento de motores e",
+                    "estabilidade.",
+                    "Atividade realizada: Montagem e teste de diferentes configurações de tração.",
+                    "Aplicação no mercado de trabalho: Robótica móvel e engenharia automotiva.",
+                    "Contexto na vida do estudante: Veículos e máquinas automatizadas.",
+                    "Meta: Construir um robô com movimento estável e controlado.",
+                    "Bônus: Testes comparativos de velocidade e precisão.",
+                    "Aula 3 – Posicionamento Estratégico de Sensores",
+                    "Tema: Como o robô percebe o ambiente",
+                    "Conceito a ser apresentado: Posicionamento de sensores de linha, distância",
+                    "ou toque.",
+                    "Atividade realizada: Montagem de sensores no robô e testes de resposta",
+                    "usando programação em blocos.",
+                    "Aplicação no mercado de trabalho: Automação e robótica inteligente.",
+                    "Contexto na vida do estudante: Robôs que seguem linhas ou desviam de",
+                    "obstáculos.",
+                    "Meta: Entender como o posicionamento do sensor influencia o funcionamento",
+                    "do robô.",
+                    "Bônus: Testes com diferentes posições de sensores."
+                  ],
+                  "dias_da_semana": [
+                    "sex"
+                  ],
+                  "data_inicio": "2026-04-10",
+                  "data_final": "2026-04-24",
+                  "horario_inicio": "09:00",
+                  "horario_final": "11:30",
+                  "materiais": [
+                    "Lego eve3"
+                  ],
+                  "formato": "Curso Presencial"
+                }
+              }
             ]
           },
           {
-            label: "Criação de jogos",
-            steps: [
-              { title: "Universo Roblox", note: "Criação e experimentação em plataforma de jogos." }
+            "label": "Fábrica de Jogos",
+            "steps": [
+              {
+                "title": "Fábrica de Jogos: Criação e Prototipagem de Jogos  Autorais",
+                "note": "A oficina Fábrica de Jogos convida os participantes a criar seus próprios jogos\nautorais utilizando materiais simples como cartolina, papel, canetas e elementos\nrecicláveis.\nDurante os encontros, os estudantes exploram conceitos básicos de game design,\naprendendo a criar regras, desafios, mecânicas de jogo e narrativas interativas. O\nprocesso é baseado em experimentação e prototipagem rápida, permitindo testar\nideias, ajustar regras e melhorar os jogos a partir da experiência dos jogadores.\nAo longo dos módulos, os participantes desenvolvem diferentes tipos de jogos —\ncomo jogos de tabuleiro, cartas e desafios cooperativos — estimulando criatividade,\npensamento estratégico, trabalho em equipe e resolução de problemas.\nAo final da formação, cada grupo terá criado e apresentado um jogo autoral\ncompleto, com protótipo funcional e regras definidas.",
+                "meta": {
+                  "objetivos": [
+                    "Estimular a criatividade e o pensamento estratégico por meio da criação e",
+                    "prototipagem de jogos autorais, desenvolvendo habilidades de design, colaboração e",
+                    "resolução de desafios.",
+                    "Objetivos Específicos",
+                    "● Compreender os princípios básicos do design de jogos.",
+                    "● Desenvolver regras e mecânicas de jogo.",
+                    "● Criar protótipos utilizando materiais simples.",
+                    "● Testar e aprimorar jogos por meio de experimentação.",
+                    "● Estimular criatividade, lógica e trabalho em equipe."
+                  ],
+                  "carga_horaria": "24 horas (2 módulos – 16 encontros de 1h30)",
+                  "pre_requisitos": [
+                    "Não há pré-requisitos. Indicado para iniciantes."
+                  ],
+                  "conteudo_programatico": [
+                    "Módulo I – Ideias e Protótipos de Jogos",
+                    "Aula 1 – O que faz um jogo ser divertido?",
+                    "Tema: Fundamentos dos jogos",
+                    "Conceito a ser apresentado: Elementos essenciais de um jogo: objetivo,",
+                    "regras, desafio e jogadores.",
+                    "Atividade realizada: Experimentação de pequenos jogos rápidos e análise",
+                    "coletiva do que torna um jogo divertido.",
+                    "Aplicação no mercado de trabalho: Game design, design de experiências e",
+                    "desenvolvimento de jogos.",
+                    "Contexto na vida do estudante: Jogos de tabuleiro, videogames e desafios",
+                    "que fazem parte do cotidiano.",
+                    "Meta: Compreender os elementos básicos que estruturam um jogo.",
+                    "Bônus: Analisar jogos famosos e identificar suas mecânicas principais.",
+                    "Aula 2 – Tipos de Jogos e Mecânicas",
+                    "Tema: Explorando formatos de jogos",
+                    "Conceito a ser apresentado: Tipos de jogos (tabuleiro, cartas, estratégia,",
+                    "cooperação, corrida).",
+                    "Atividade realizada: Mapa de ideias de jogos e escolha do formato para o",
+                    "primeiro protótipo.",
+                    "Aplicação no mercado de trabalho: Design de jogos, entretenimento e",
+                    "educação gamificada.",
+                    "Contexto na vida do estudante: Jogos que eles já conhecem e jogam com",
+                    "amigos ou família.",
+                    "Meta: Identificar diferentes tipos de jogos e escolher um formato para criar.",
+                    "Bônus: Exploração de mecânicas usadas em jogos famosos.",
+                    "Aula 3 – Criando Regras",
+                    "Tema: Estrutura das regras do jogo",
+                    "Conceito a ser apresentado: Objetivo do jogo, turnos, progressão e condição",
+                    "de vitória.",
+                    "Atividade realizada: Escrita das primeiras regras do jogo criado pelos alunos.",
+                    "Aplicação no mercado de trabalho: Game design e design de sistemas.",
+                    "Contexto na vida do estudante: Regras presentes em esportes, jogos e",
+                    "atividades escolares.",
+                    "Meta: Construir um conjunto inicial de regras para um jogo.",
+                    "Bônus: Criar regras alternativas ou modos diferentes de jogo.",
+                    "Aula 4 – Construindo o Primeiro Protótipo",
+                    "Tema: Prototipagem rápida",
+                    "Conceito a ser apresentado: Como transformar ideias em protótipos simples.",
+                    "Atividade realizada: Construção do primeiro tabuleiro ou cartas usando",
+                    "cartolina.",
+                    "Aplicação no mercado de trabalho: Prototipagem em design, engenharia e",
+                    "criação de produtos.",
+                    "Contexto na vida do estudante: Construção de jogos artesanais.",
+                    "Meta: Criar a primeira versão jogável do jogo.",
+                    "Bônus: Experimentar materiais diferentes para melhorar o protótipo.",
+                    "Aula 5 – Testando o Jogo (Playtest)",
+                    "Tema: Teste de jogabilidade",
+                    "Conceito a ser apresentado: Importância de testar jogos para encontrar erros",
+                    "e melhorar a experiência.",
+                    "Atividade realizada:",
+                    "Os alunos jogam os jogos uns dos outros.",
+                    "Aplicação no mercado de trabalho: Testes de produto e validação de ideias.",
+                    "Contexto na vida do estudante: Experimentar e melhorar algo após testar.",
+                    "Meta: Identificar problemas e oportunidades de melhoria no jogo.",
+                    "Bônus: Registro de feedback dos jogadores.",
+                    "Aula 6 – Melhorando as Mecânicas",
+                    "Tema: Ajustes de jogo",
+                    "Conceito a ser apresentado: Equilíbrio entre dificuldade, tempo de jogo e",
+                    "diversão.",
+                    "Atividade realizada: Alteração das regras e ajustes no protótipo.",
+                    "Aplicação no mercado de trabalho: Design de produtos e desenvolvimento",
+                    "de jogos.",
+                    "Contexto na vida do estudante: Ajustar regras para tornar jogos mais justos.",
+                    "Meta: Melhorar a experiência de jogo.",
+                    "Bônus: Criar versões alternativas das mecânicas.",
+                    "Aula 7 – Design Visual do Jogo",
+                    "Tema: Identidade visual do jogo",
+                    "Conceito a ser apresentado: Uso de cores, símbolos e layout para facilitar o",
+                    "jogo.",
+                    "Atividade realizada: Melhoria visual do tabuleiro e das peças.",
+                    "Aplicação no mercado de trabalho: Design gráfico e comunicação visual.",
+                    "Contexto na vida do estudante: Jogos com visual claro e atrativo.",
+                    "Meta: Tornar o jogo mais compreensível e visualmente interessante.",
+                    "Bônus: Criar logotipo ou identidade visual para o jogo.",
+                    "Aula 8 – Apresentação dos Protótipos",
+                    "Tema: Compartilhar e avaliar jogos",
+                    "Conceito a ser apresentado: Apresentação de projetos e feedback coletivo.",
+                    "Atividade realizada: Sessão de testes e apresentação dos jogos criados.",
+                    "Aplicação no mercado de trabalho: Apresentação de projetos criativos.",
+                    "Contexto na vida do estudante: Mostrar ideias e projetos para outras",
+                    "pessoas.",
+                    "Meta: Consolidar o aprendizado do módulo.",
+                    "Bônus: Registro fotográfico dos jogos criados."
+                  ],
+                  "dias_da_semana": [
+                    "seg",
+                    "qua"
+                  ],
+                  "data_inicio": "2026-04-06",
+                  "data_final": "2026-04-29",
+                  "horario_inicio": "09:00",
+                  "horario_final": "10:30",
+                  "materiais": [
+                    "Materiais de Papelaria"
+                  ],
+                  "formato": "Curso Presencial"
+                }
+              }
+            ]
+          },
+          {
+            "label": "pud+escolas",
+            "steps": [
+              {
+                "title": "PUD + Escolas: Caminhos e Traçados para Robôs",
+                "note": "O EducaPUD integra o programa PUD + Escolas, uma iniciativa anual da\nPlataforma Urbana Digital que promove atividades educativas em parceria com\nescolas da rede municipal.\nA proposta busca aproximar crianças da educação infantil de experiências\ncriativas que combinam tecnologia, ludicidade e aprendizagem, utilizando\nrecursos como robótica educacional, jogos, construção de percursos e\natividades sensoriais.\n\nAs oficinas são realizadas semanalmente ao longo do ano e estruturadas de\nforma progressiva, respeitando as características da faixa etária e priorizando\nmetodologias baseadas na experimentação, no brincar e na exploração.\nDurante os encontros, as crianças participam de desafios que estimulam\ncoordenação motora, percepção espacial, raciocínio lógico e linguagem,\ncontribuindo também para o processo inicial de alfabetização.",
+                "meta": {
+                  "objetivos": [
+                    "Treinar traçado"
+                  ],
+                  "carga_horaria": "1 hora e 30 minutos por encontro",
+                  "pre_requisitos": [
+                    "Nenhum"
+                  ],
+                  "conteudo_programatico": [
+                    "Parte 1 – Descobrindo os Caminhos",
+                    "Tema: Traços e direções",
+                    "Conceito a ser apresentado: Linhas e trajetórias que orientam movimentos.",
+                    "Atividade realizada: As crianças desenham caminhos simples para que o robô",
+                    "percorra.",
+                    "Aplicação no desenvolvimento infantil: Coordenação motora fina e",
+                    "percepção espacial.",
+                    "Contexto na vida da criança: Caminhos presentes nas ruas, brincadeiras e",
+                    "desenhos.",
+                    "Meta: Compreender que o robô segue o caminho desenhado.",
+                    "Bônus: Exploração livre de diferentes trajetórias.",
+                    "Parte 2 – Linhas e Curvas",
+                    "Tema: Variedade de traçados",
+                    "Conceito a ser apresentado: Diferença entre linhas retas e curvas.",
+                    "Atividade realizada: Criação de percursos com mudanças de direção.",
+                    "Aplicação no desenvolvimento infantil: Desenvolvimento motor e percepção",
+                    "visual.",
+                    "Contexto na vida da criança: Formas presentes em desenhos e letras.",
+                    "Meta: Explorar diferentes tipos de traços.",
+                    "Bônus: Desafios de percursos mais longos para o robô.",
+                    "Encontro 3 – Caminhos com Desafios",
+                    "Tema: Percursos e obstáculos",
+                    "Conceito a ser apresentado: Planejamento de trajetórias.",
+                    "Atividade realizada: Construção de caminhos com obstáculos e mudanças de",
+                    "direção.",
+                    "Aplicação no desenvolvimento infantil: Raciocínio lógico e planejamento.",
+                    "Contexto na vida da criança: Brincadeiras de labirinto e jogos de percurso.",
+                    "Meta: Planejar caminhos que o robô consiga percorrer.",
+                    "Bônus: Construção de pequenos labirintos.",
+                    "Parte 4 – Grande Circuito Coletivo",
+                    "Tema: Circuito de trajetórias",
+                    "Conceito a ser apresentado: Integração de diferentes tipos de traçado.",
+                    "Atividade realizada: Criação coletiva de um grande circuito para o robô.",
+                    "Aplicação no desenvolvimento infantil: Trabalho colaborativo e criatividade.",
+                    "Contexto na vida da criança: Brincadeiras coletivas e jogos em grupo.",
+                    "Meta: Criar um circuito completo e observar o percurso do robô.",
+                    "Bônus: Registro fotográfico do circuito construído."
+                  ],
+                  "dias_da_semana": [
+                    "sex"
+                  ],
+                  "data_inicio": "2026-04-10",
+                  "data_final": "2026-04-24",
+                  "horario_inicio": "09:30",
+                  "horario_final": "12:00",
+                  "materiais": [
+                    "robo segue linha, cartolina, caneta hidrocor"
+                  ],
+                  "formato": "Curso Presencial"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "eco": {
+        "label": "Economia Criativa",
+        "accentClass": "accent-eco",
+        "lanes": []
+      },
+      "niv": {
+        "label": "Nivelamento",
+        "accentClass": "accent-niv",
+        "lanes": []
+      }
+    }
+  },
+  "jovens_adultos": {
+    "label": "Jovens e Adultos",
+    "description": "Trilhas para aprofundamento técnico, portfólio e projetos aplicados.",
+    "areas": {
+      "audiovisual": {
+        "label": "Audiovisual",
+        "accentClass": "accent-audiovisual",
+        "lanes": [
+          {
+            "label": "Fotografia em Estúdio",
+            "steps": [
+              {
+                "title": "Fotografia em Estúdio – Módulo II",
+                "note": "Estudantes, fotógrafos iniciantes, criadores de conteúdo, artistas\nvisuais e pessoas interessadas em aprofundar o processo de edição, apresentação e\ncirculação de trabalhos fotográficos.",
+                "meta": {
+                  "objetivos": [
+                    "Aprimorar os processos de finalização da fotografia em estúdio, desenvolvendo",
+                    "habilidades de edição, curadoria e apresentação de trabalhos fotográficos, culminando",
+                    "na criação de um portfólio autoral e na realização de uma exposição coletiva dos",
+                    "participantes.",
+                    "Objetivos Específicos",
+                    "● Introduzir técnicas básicas de edição e tratamento de imagens fotográficas.",
+                    "● Desenvolver habilidades de seleção e curadoria de fotografias.",
+                    "● Orientar os participantes na organização de portfólio autoral.",
+                    "● Apresentar processos de preparação e apresentação de trabalhos fotográficos.",
+                    "● Promover a realização de uma exposição coletiva com as produções dos",
+                    "participantes."
+                  ],
+                  "carga_horaria": "30 horas (09 aulas de 3 horas)",
+                  "pre_requisitos": [
+                    "Ter concluído os módulos anteriores ou possuir conhecimentos",
+                    "intermediários de fotografia em estúdio."
+                  ],
+                  "conteudo_programatico": [
+                    "Conteúdo Programático",
+                    "Aula 1 – Fluxo de Trabalho Fotográfico",
+                    "● Tema: Do clique à imagem final",
+                    "● Conceito a ser apresentado: Organização de arquivos e fluxo de trabalho na",
+                    "fotografia",
+                    "● Atividade realizada: Organização das fotografias produzidas nos módulos",
+                    "anteriores",
+                    "● Aplicação no mercado de trabalho: Gestão de arquivos fotográficos",
+                    "● Contexto na vida do estudante: Organização do próprio acervo visual",
+                    "● Meta: Compreender o fluxo de trabalho do fotógrafo",
+                    "● Bônus: Boas práticas de armazenamento de arquivos",
+                    "Aula 2 – Introdução à Edição Fotográfica",
+                    "● Tema: Tratamento de imagem",
+                    "● Conceito a ser apresentado: Ajustes básicos de luz, contraste e cor",
+                    "● Atividade realizada: Exercícios práticos de edição em imagens autorais",
+                    "● Aplicação no mercado de trabalho: Pós-produção fotográfica",
+                    "● Contexto na vida do estudante: Refinamento técnico das imagens",
+                    "● Meta: Realizar edições básicas de fotografia",
+                    "● Bônus: Comparação entre imagem original e imagem tratada",
+                    "Aula 3 – Estética e Consistência Visual",
+                    "● Tema: Coerência estética",
+                    "● Conceito a ser apresentado: Padronização visual em séries fotográficas",
+                    "● Atividade realizada: Ajustes de edição para manter unidade estética",
+                    "● Aplicação no mercado de trabalho: Identidade visual de fotógrafos",
+                    "● Contexto na vida do estudante: Construção de estilo próprio",
+                    "● Meta: Criar consistência visual nas imagens",
+                    "● Bônus: Referências de portfólios fotográficos",
+                    "Aula 4 – Curadoria e Seleção de Imagens",
+                    "● Tema: Escolha das fotografias",
+                    "● Conceito a ser apresentado: Critérios de seleção e leitura de imagens",
+                    "● Atividade realizada: Seleção das melhores imagens para portfólio",
+                    "● Aplicação no mercado de trabalho: Curadoria e apresentação de trabalhos",
+                    "● Contexto na vida do estudante: Avaliação crítica do próprio trabalho",
+                    "● Meta: Aprimorar a capacidade de seleção fotográfica",
+                    "● Bônus: Exercício coletivo de leitura de imagens",
+                    "Aula 5 – Construção de Portfólio Fotográfico",
+                    "● Tema: Apresentação profissional",
+                    "● Conceito a ser apresentado: Estrutura de portfólio e narrativa visual",
+                    "● Atividade realizada: Organização das imagens em sequência narrativa",
+                    "● Aplicação no mercado de trabalho: Apresentação para clientes e projetos",
+                    "● Contexto na vida do estudante: Construção de identidade profissional",
+                    "● Meta: Criar um portfólio autoral estruturado",
+                    "● Bônus: Exemplos de portfólios de fotógrafos",
+                    "Aula 6 – Fotografia e Espaço Expositivo",
+                    "● Tema: A fotografia fora da tela",
+                    "● Conceito a ser apresentado: Formatos de impressão e exposição",
+                    "● Atividade realizada: Planejamento das imagens para exposição",
+                    "● Aplicação no mercado de trabalho: Exposições e mostras fotográficas",
+                    "● Contexto na vida do estudante: Circulação cultural da fotografia",
+                    "● Meta: Compreender o processo de preparação para exposição",
+                    "● Bônus: Referências de exposições fotográficas",
+                    "Aula 7 – Curadoria da Exposição",
+                    "● Tema: Construção da mostra",
+                    "● Conceito a ser apresentado: Organização coletiva de exposição",
+                    "● Atividade realizada: Seleção final das imagens da exposição",
+                    "● Aplicação no mercado de trabalho: Produção cultural e curadoria",
+                    "● Contexto na vida do estudante: Trabalho coletivo em projetos culturais",
+                    "● Meta: Definir o conjunto final da exposição",
+                    "● Bônus: Discussão coletiva sobre narrativa da mostra",
+                    "Aula 8 – Preparação da Exposição",
+                    "● Tema: Montagem e apresentação",
+                    "● Conceito a ser apresentado: Planejamento espacial e apresentação visual",
+                    "● Atividade realizada: Organização e planejamento da montagem da exposição",
+                    "● Aplicação no mercado de trabalho: Produção de eventos culturais",
+                    "● Contexto na vida do estudante: Compartilhamento público da produção artística",
+                    "● Meta: Planejar a montagem da exposição",
+                    "● Bônus: Criação de textos de apresentação das obras",
+                    "Aula 9 – Montagem da Exposição",
+                    "● Tema: Instalação da mostra",
+                    "● Conceito a ser apresentado: Disposição e diálogo entre as imagens",
+                    "● Atividade realizada: Montagem coletiva da exposição",
+                    "● Aplicação no mercado de trabalho: Produção de exposições fotográficas",
+                    "● Contexto na vida do estudante: Experiência prática de montagem",
+                    "● Meta: Organizar a exposição final",
+                    "● Bônus: Ajustes finais da apresentação"
+                  ],
+                  "dias_da_semana": [
+                    "ter",
+                    "qui"
+                  ],
+                  "data_inicio": "2026-04-02",
+                  "data_final": "2026-04-30",
+                  "horario_inicio": "15:00",
+                  "horario_final": "18:00",
+                  "materiais": [
+                    "Equipamentos fotográfico"
+                  ],
+                  "formato": "Curso Presencial"
+                }
+              }
+            ]
+          },
+          {
+            "label": "Fundamentos do Cinema - MÓDULO II",
+            "steps": [
+              {
+                "title": "Fundamentos do Cinema – Módulo II: Criação e  Produção Audiovisual",
+                "note": "No Módulo II, os participantes avançam da compreensão teórica da linguagem\ncinematográfica para a experimentação prática da produção audiovisual. Após o\ncontato inicial com conceitos de narrativa, enquadramento, direção e análise de filmes\ndesenvolvidos no módulo anterior, os estudantes passam a aplicar esses\nconhecimentos na criação de um projeto audiovisual coletivo.\nDurante as aulas, serão exploradas as etapas fundamentais do processo de produção\ncinematográfica, incluindo desenvolvimento de roteiro, planejamento visual,\ndireção de cena, captação de imagem e som, e introdução à montagem. As\natividades são orientadas por exercícios práticos que estimulam a colaboração, a\ncriatividade e a tomada de decisões estéticas durante o processo de filmagem.\nAo longo do módulo, os participantes trabalharão em equipe para desenvolver e\nproduzir um curta-metragem simples, experimentando diferentes funções dentro de\numa produção audiovisual, como direção, câmera, roteiro e atuação. A proposta busca\naproximar os estudantes do processo real de criação cinematográfica, promovendo\n\ncompreensão prática da linguagem do cinema e estimulando o desenvolvimento de\num olhar autoral.\nAo final do curso, o curta produzido será exibido em uma sessão coletiva, permitindo\nque os participantes reflitam sobre o processo criativo, analisem os resultados obtidos\ne compartilhem suas experiências com o grupo.",
+                "meta": {
+                  "objetivos": [
+                    "Aprofundar os conhecimentos da linguagem cinematográfica por meio do",
+                    "desenvolvimento de projetos audiovisuais, explorando etapas de planejamento,",
+                    "produção e realização prática de cenas e curtas experimentais.",
+                    "Objetivos Específicos",
+                    "● Desenvolver a capacidade de criação de projetos audiovisuais.",
+                    "● Compreender as etapas de produção de uma obra audiovisual.",
+                    "● Estimular o trabalho em equipe em processos criativos.",
+                    "● Aplicar na prática os conceitos de narrativa, direção e linguagem visual."
+                  ],
+                  "carga_horaria": "22 horas e 30 minutos (9 aulas de 2h30)",
+                  "pre_requisitos": [
+                    "Conclusão do Módulo I ou conhecimentos básicos de linguagem",
+                    "audiovisual."
+                  ],
+                  "conteudo_programatico": [
+                    "Aula 1 – Introdução à Produção Audiovisual",
+                    "● Tema: Como nasce um projeto audiovisual",
+                    "● Conceito a ser apresentado: Etapas da produção (pré-produção, produção e",
+                    "pós-produção).",
+                    "● Atividade realizada: Análise do processo de produção de um filme ou curta.",
+                    "● Aplicação no mercado de trabalho: Cinema, publicidade, internet e produção",
+                    "independente.",
+                    "● Contexto na vida do estudante: Criação de vídeos para redes sociais e projetos",
+                    "autorais.",
+                    "● Meta: Compreender o fluxo de produção audiovisual.",
+                    "● Bônus: Exemplos de bastidores de produções cinematográficas.",
+                    "Aula 2 – Desenvolvimento de Ideias",
+                    "● Tema: Da ideia ao projeto",
+                    "● Conceito a ser apresentado: Ideia central, premissa e conceito de história.",
+                    "● Atividade realizada: Exercício de criação de ideias de curtas.",
+                    "● Aplicação no mercado de trabalho: Desenvolvimento de conteúdo audiovisual.",
+                    "● Contexto na vida do estudante: Transformar ideias em narrativas estruturadas.",
+                    "● Meta: Aprender a desenvolver conceitos narrativos.",
+                    "● Bônus: Técnicas de brainstorming.",
+                    "Aula 3 – Construção de Personagens",
+                    "● Tema: Personagens e conflito dramático",
+                    "● Conceito a ser apresentado: Objetivos, motivações e conflitos.",
+                    "● Atividade realizada: Criação de personagens para histórias curtas.",
+                    "● Aplicação no mercado de trabalho: Roteiro e storytelling.",
+                    "● Contexto na vida do estudante: Identificação com personagens de filmes e séries.",
+                    "● Meta: Criar personagens com intenção narrativa.",
+                    "● Bônus: Arquétipos narrativos no cinema.",
+                    "Aula 4 – Escrita de Roteiro Curto",
+                    "● Tema: Estrutura de roteiro",
+                    "● Conceito a ser apresentado: Estrutura de cenas, ações e diálogos.",
+                    "● Atividade realizada: Desenvolvimento de roteiro curto em grupo.",
+                    "● Aplicação no mercado de trabalho: Roteiro para cinema, TV e internet.",
+                    "● Contexto na vida do estudante: Planejamento narrativo de vídeos.",
+                    "● Meta: Produzir roteiro simples para filmagem.",
+                    "● Bônus: Leitura de trechos de roteiros.",
+                    "Aula 5 – Planejamento da Cena",
+                    "● Tema: Transformar roteiro em planejamento visual",
+                    "● Conceito a ser apresentado: Decupagem, storyboard e planejamento de filmagem.",
+                    "● Atividade realizada: Planejamento visual da cena criada pelos grupos.",
+                    "● Aplicação no mercado de trabalho: Direção e planejamento audiovisual.",
+                    "● Contexto na vida do estudante: Organização de gravações.",
+                    "● Meta: Compreender a decupagem de uma cena.",
+                    "● Bônus: Exemplos de storyboard no cinema.",
+                    "Aula 6 – Direção de Cena",
+                    "● Tema: Direção prática",
+                    "● Conceito a ser apresentado: Direção de atores e construção da cena.",
+                    "● Atividade realizada: Ensaios e preparação das cenas.",
+                    "● Aplicação no mercado de trabalho: Direção audiovisual.",
+                    "● Contexto na vida do estudante: Expressão criativa em projetos coletivos.",
+                    "● Meta: Experimentar o papel do diretor.",
+                    "● Bônus: Técnicas de direção de atores.",
+                    "Aula 7 – Filmagem",
+                    "● Tema: Produção da cena",
+                    "● Conceito a ser apresentado: Organização de equipe e execução da filmagem.",
+                    "● Atividade realizada: Filmagem das cenas planejadas.",
+                    "● Aplicação no mercado de trabalho: Produção audiovisual.",
+                    "● Contexto na vida do estudante: Produção prática de conteúdo.",
+                    "● Meta: Realizar gravação de material audiovisual.",
+                    "● Bônus: Noções básicas de produção de set.",
+                    "Aula 8 – Continuação das Filmagens",
+                    "● Tema: Finalização da produção",
+                    "● Conceito a ser apresentado: Organização do material filmado.",
+                    "● Atividade realizada: Conclusão das gravações.",
+                    "● Aplicação no mercado de trabalho: Produção audiovisual independente.",
+                    "● Contexto na vida do estudante: Trabalho em equipe.",
+                    "● Meta: Finalizar material para montagem.",
+                    "● Bônus: Organização de arquivos de vídeo.",
+                    "Aula 9 – Introdução à Montagem",
+                    "● Tema: Organização do material gravado",
+                    "● Conceito a ser apresentado: Seleção de planos e montagem inicial.",
+                    "● Atividade realizada: Montagem básica das cenas gravadas.",
+                    "● Aplicação no mercado de trabalho: Edição de vídeo.",
+                    "● Contexto na vida do estudante: Ferramentas de edição digital.",
+                    "● Meta: Construir sequência narrativa com imagens gravadas.",
+                    "● Bônus: Noções básicas de softwares de edição."
+                  ],
+                  "dias_da_semana": [
+                    "ter",
+                    "qui"
+                  ],
+                  "data_inicio": "2026-04-02",
+                  "data_final": "2026-04-30",
+                  "horario_inicio": "09:00",
+                  "horario_final": "11:30",
+                  "materiais": [
+                    "Equipamento de audiovisual"
+                  ],
+                  "formato": "Curso Presencial"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "design": {
+        "label": "Design e Marketing",
+        "accentClass": "accent-design",
+        "lanes": [
+          {
+            "label": "Canva",
+            "steps": [
+              {
+                "title": "Crie sua gráfica com Canva",
+                "note": "Este curso apresenta o Canva como ferramenta para criação de materiais\ngráficos impressos, permitindo que os participantes aprendam a produzir\npeças utilizadas em comunicação visual e divulgação de produtos e serviços.\nAo longo das aulas, os estudantes aprendem princípios básicos de design,\norganização visual e preparação de arquivos para impressão. A proposta do\ncurso é mostrar como é possível criar, de forma acessível e profissional,\nmateriais que normalmente seriam produzidos em gráficas.\nDurante o percurso, serão desenvolvidos projetos práticos como cartões de\nvisita, panfletos, cartazes, etiquetas, cardápios e kits de divulgação,\npermitindo que os participantes construam um conjunto completo de materiais\ngráficos.\nAo final do curso, os participantes terão criado um kit de materiais prontos\npara impressão, compreendendo também como preparar arquivos\ncorretamente para envio à gráfica ou impressão doméstica.",
+                "meta": {
+                  "objetivos": [
+                    "Capacitar os participantes para criar materiais gráficos impressos utilizando o",
+                    "Canva, permitindo a produção de peças de comunicação visual para uso",
+                    "pessoal ou profissional.",
+                    "Objetivos Específicos",
+                    "● Compreender princípios básicos de design gráfico.",
+                    "● Criar materiais impressos utilizando Canva.",
+                    "● Desenvolver peças gráficas utilizadas em divulgação e comunicação visual.",
+                    "● Aprender a preparar arquivos para impressão.",
+                    "● Criar um conjunto de materiais gráficos para uso em pequenos negócios."
+                  ],
+                  "carga_horaria": "13h30",
+                  "pre_requisitos": [
+                    "Conhecimentos básicos de informática."
+                  ],
+                  "conteudo_programatico": [
+                    "Conteúdo Programático",
+                    "Aula 1 – Introdução ao Canva e ao Design Gráfico",
+                    "Projeto: Cartão de visita simples",
+                    "Tema: Fundamentos do design",
+                    "Conceito a ser apresentado: Interface do Canva e princípios básicos de",
+                    "design gráfico.",
+                    "Atividade realizada: Criação de um cartão de visita simples.",
+                    "Aplicação no mercado de trabalho: Identidade visual de profissionais e",
+                    "pequenos negócios.",
+                    "Contexto na vida do estudante: Divulgação de serviços ou projetos pessoais.",
+                    "Meta: Compreender como organizar informações em uma peça gráfica.",
+                    "Bônus: Exploração de diferentes modelos de layout.",
+                    "Aula 2 – Cartão de Visita Profissional",
+                    "Projeto: Cartão de visita completo",
+                    "Tema: Organização visual",
+                    "Conceito a ser apresentado: Hierarquia visual, tipografia e uso de cores.",
+                    "Atividade realizada: Criação de cartão de visita profissional.",
+                    "Aplicação no mercado de trabalho: Material essencial para networking e",
+                    "divulgação.",
+                    "Contexto na vida do estudante: Apresentação de serviços ou projetos.",
+                    "Meta: Criar um cartão visualmente organizado.",
+                    "Bônus: Criação de variações de layout.",
+                    "Aula 3 – Panfletos de Divulgação",
+                    "Projeto: Panfleto promocional",
+                    "Tema: Comunicação visual",
+                    "Conceito a ser apresentado: Organização de informações e destaque de",
+                    "mensagens.",
+                    "Atividade realizada: Criação de panfleto para divulgação de produtos ou",
+                    "serviços.",
+                    "Aplicação no mercado de trabalho: Promoção de negócios e eventos.",
+                    "Contexto na vida do estudante: Divulgação de atividades e projetos.",
+                    "Meta: Criar um panfleto claro e atrativo.",
+                    "Bônus: Uso de imagens e ícones.",
+                    "Aula 4 – Cartazes de Divulgação",
+                    "Projeto: Cartaz",
+                    "Tema: Impacto visual",
+                    "Conceito a ser apresentado: Contraste, tamanho e composição.",
+                    "Atividade realizada: Criação de cartaz para evento ou campanha.",
+                    "Aplicação no mercado de trabalho: Comunicação visual em eventos e",
+                    "campanhas.",
+                    "Contexto na vida do estudante: Divulgação de atividades culturais.",
+                    "Meta: Criar um cartaz com impacto visual.",
+                    "Bônus: Uso criativo de cores e imagens.",
+                    "Aula 5 – Etiquetas e Adesivos",
+                    "Projeto: Etiquetas de produto",
+                    "Tema: Design para embalagens",
+                    "Conceito a ser apresentado: Organização visual para pequenos formatos.",
+                    "Atividade realizada: Criação de etiquetas para produtos.",
+                    "Aplicação no mercado de trabalho: Identificação e branding de produtos.",
+                    "Contexto na vida do estudante: Produção artesanal e pequenos negócios.",
+                    "Meta: Criar etiquetas claras e funcionais.",
+                    "Bônus: Criação de adesivos personalizados.",
+                    "Aula 6 – Cardápios e Listas de Produtos",
+                    "Projeto: Cardápio simples",
+                    "Tema: Organização de informações",
+                    "Conceito a ser apresentado: Estrutura visual para leitura rápida.",
+                    "Atividade realizada: Criação de cardápio ou lista de produtos.",
+                    "Aplicação no mercado de trabalho: Restaurantes, lanchonetes e pequenos",
+                    "negócios.",
+                    "Contexto na vida do estudante: Apresentação organizada de produtos.",
+                    "Meta: Criar materiais claros para apresentação de produtos.",
+                    "Bônus: Uso de ícones e divisões visuais.",
+                    "Aula 7 – Kit de Divulgação",
+                    "Projeto: Conjunto de peças gráficas",
+                    "Tema: Consistência visual",
+                    "Conceito a ser apresentado: Padronização de cores, fontes e estilo.",
+                    "Atividade realizada: Criação de conjunto de materiais gráficos.",
+                    "Aplicação no mercado de trabalho: Identidade visual de negócios.",
+                    "Contexto na vida do estudante: Divulgação de projetos ou serviços.",
+                    "Meta: Criar materiais visualmente consistentes.",
+                    "Bônus: Exploração de identidade visual.",
+                    "Aula 8 – Preparação para Impressão",
+                    "Projeto: Arquivos prontos para gráfica",
+                    "Tema: Arquivos e exportação",
+                    "Conceito a ser apresentado: Resolução, margens e formatos de exportação.",
+                    "Atividade realizada: Preparação dos arquivos criados para impressão.",
+                    "Aplicação no mercado de trabalho: Produção de materiais gráficos",
+                    "profissionais.",
+                    "Contexto na vida do estudante: Envio de arquivos para gráficas.",
+                    "Meta: Exportar arquivos corretamente.",
+                    "Bônus: Dicas para evitar erros de impressão.",
+                    "Aula 9 – Projeto Final",
+                    "Projeto: Kit gráfico completo",
+                    "Tema: Integração dos aprendizados",
+                    "Conceito a ser apresentado: Organização de materiais de divulgação.",
+                    "Atividade realizada: Criação de um kit gráfico com diferentes peças.",
+                    "Aplicação no mercado de trabalho: Divulgação profissional de produtos ou",
+                    "serviços.",
+                    "Contexto na vida do estudante: Criação de materiais para projetos pessoais.",
+                    "Meta: Consolidar o aprendizado do curso.",
+                    "Bônus: Apresentação dos materiais criados."
+                  ],
+                  "dias_da_semana": [
+                    "ter",
+                    "qui"
+                  ],
+                  "data_inicio": "2026-04-02",
+                  "data_final": "2026-04-30",
+                  "horario_inicio": "16:30",
+                  "horario_final": "18:00",
+                  "materiais": [
+                    "Notebook"
+                  ],
+                  "formato": "Presencial"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "prog": {
+        "label": "Programação e Games",
+        "accentClass": "accent-prog",
+        "lanes": [
+          {
+            "label": "React Native",
+            "steps": [
+              {
+                "title": "Desenvolvimento de Aplicativos com React Native:  Criação de Apps para Android e iOS",
+                "note": "Este curso apresenta os fundamentos do desenvolvimento de aplicativos\nmóveis utilizando React Native, uma das tecnologias mais utilizadas no\nmercado para criação de aplicativos multiplataforma para Android e iOS.\nDurante os encontros, os participantes aprendem a estruturar projetos, criar\ninterfaces, trabalhar com componentes e organizar a lógica de funcionamento\nde aplicativos móveis. A formação também aborda conceitos de experiência do\nusuário e boas práticas de desenvolvimento.\nAs atividades são orientadas a projetos, permitindo que os estudantes\ndesenvolvam gradualmente um aplicativo funcional, aplicando os\nconhecimentos adquiridos ao longo das aulas.\nAo final da formação, os participantes terão desenvolvido um aplicativo\nfuncional com múltiplas telas e interação com o usuário, compreendendo o\nfluxo completo de criação de um app.",
+                "meta": {
+                  "objetivos": [
+                    "Introduzir os fundamentos do desenvolvimento de aplicativos móveis utilizando",
+                    "React Native, permitindo que os participantes compreendam e construam",
+                    "aplicativos simples e funcionais.",
+                    "Objetivos Específicos",
+                    "● Compreender os fundamentos do desenvolvimento mobile.",
+                    "● Aprender a utilizar componentes e estrutura do React Native.",
+                    "● Desenvolver interfaces de aplicativos.",
+                    "● Trabalhar com navegação e organização de dados.",
+                    "● Criar um aplicativo funcional ao final do curso."
+                  ],
+                  "carga_horaria": "40 horas (16 aulas de 2h30)",
+                  "pre_requisitos": [
+                    "Conhecimentos básicos de informática. É desejável familiaridade com",
+                    "lógica de programação ou JavaScript."
+                  ],
+                  "conteudo_programatico": [
+                    "Módulo I – Fundamentos do React Native",
+                    "(Primeiro mês – 8 aulas)",
+                    "Aula 1 – Introdução ao Desenvolvimento Mobile",
+                    "Tema: Como funcionam os aplicativos móveis",
+                    "Conceito a ser apresentado: Diferença entre aplicativos web, híbridos e",
+                    "nativos.",
+                    "Atividade realizada: Instalação do ambiente de desenvolvimento e criação do",
+                    "primeiro projeto React Native.",
+                    "Aplicação no mercado de trabalho: Desenvolvimento de aplicativos móveis.",
+                    "Contexto na vida do estudante: Aplicativos utilizados no dia a dia, como",
+                    "redes sociais e aplicativos de transporte.",
+                    "Meta: Compreender o processo de desenvolvimento de aplicativos.",
+                    "Bônus: Exploração de aplicativos famosos feitos com React Native.",
+                    "Aula 2 – Estrutura de um Projeto React Native",
+                    "Tema: Organização do aplicativo",
+                    "Conceito a ser apresentado: Estrutura de pastas, arquivos principais e",
+                    "funcionamento do projeto.",
+                    "Atividade realizada: Exploração da estrutura do projeto criado.",
+                    "Aplicação no mercado de trabalho: Organização e manutenção de projetos",
+                    "de software.",
+                    "Contexto na vida do estudante: Organização de projetos digitais.",
+                    "Meta: Entender como um aplicativo React Native é estruturado.",
+                    "Bônus: Introdução a ferramentas de desenvolvimento.",
+                    "Aula 3 – Componentes de Interface",
+                    "Tema: Construindo telas de aplicativos",
+                    "Conceito a ser apresentado: Componentes básicos: View, Text, Image.",
+                    "Atividade realizada: Criação de uma tela simples de aplicativo.",
+                    "Aplicação no mercado de trabalho: Desenvolvimento de interfaces digitais.",
+                    "Contexto na vida do estudante: Telas de aplicativos que usamos diariamente.",
+                    "Meta: Criar a primeira interface de aplicativo.",
+                    "Bônus: Explorar bibliotecas de componentes.",
+                    "Aula 4 – Estilização de Interfaces",
+                    "Tema: Design de aplicativos",
+                    "Conceito a ser apresentado: Uso de estilos para layout e aparência.",
+                    "Atividade realizada: Estilização da tela criada anteriormente.",
+                    "Aplicação no mercado de trabalho: Front-end e design de interfaces.",
+                    "Contexto na vida do estudante: Personalização visual de aplicativos.",
+                    "Meta: Criar interfaces visualmente organizadas.",
+                    "Bônus: Explorar sistemas de design.",
+                    "Aula 5 – Interações e Eventos",
+                    "Tema: Interação com o usuário",
+                    "Conceito a ser apresentado: Eventos, botões e ações.",
+                    "Atividade realizada: Criação de botões com ações no aplicativo.",
+                    "Aplicação no mercado de trabalho: Interfaces interativas.",
+                    "Contexto na vida do estudante: Interações presentes em aplicativos.",
+                    "Meta: Criar interações básicas.",
+                    "Bônus: Adicionar feedback visual nas ações.",
+                    "Aula 6 – Navegação entre Telas",
+                    "Tema: Fluxo de navegação",
+                    "Conceito a ser apresentado: Conceito de navegação entre telas em",
+                    "aplicativos.",
+                    "Atividade realizada: Criação de múltiplas telas conectadas.",
+                    "Aplicação no mercado de trabalho: Arquitetura de aplicativos.",
+                    "Contexto na vida do estudante: Navegação entre páginas de aplicativos.",
+                    "Meta: Criar aplicativos com múltiplas telas.",
+                    "Bônus: Explorar navegação por abas.",
+                    "Aula 7 – Trabalhando com Listas de Dados",
+                    "Tema: Exibição de informações",
+                    "Conceito a ser apresentado: Renderização de listas de dados.",
+                    "Atividade realizada: Criação de uma tela com lista de informações.",
+                    "Aplicação no mercado de trabalho: Aplicativos de serviços e redes sociais.",
+                    "Contexto na vida do estudante: Listas presentes em aplicativos como",
+                    "contatos e tarefas.",
+                    "Meta: Exibir dados de forma organizada.",
+                    "Bônus: Adicionar filtros simples.",
+                    "Aula 8 – Mini Projeto de Aplicativo",
+                    "Tema: Projeto prático",
+                    "Conceito a ser apresentado: Integração dos conceitos aprendidos.",
+                    "Atividade realizada: Criação de um pequeno aplicativo funcional.",
+                    "Aplicação no mercado de trabalho: Prototipagem de aplicativos.",
+                    "Contexto na vida do estudante: Criar soluções digitais simples.",
+                    "Meta: Finalizar o primeiro app funcional.",
+                    "Bônus: Personalização do aplicativo.",
+                    "Módulo II – Desenvolvimento de Apps Funcionais",
+                    "(Segundo mês – 8 aulas)",
+                    "Aula 1 – Planejamento do Aplicativo",
+                    "Tema: Ideia e estrutura do app",
+                    "Conceito a ser apresentado: Planejamento de funcionalidades e estrutura de",
+                    "telas.",
+                    "Atividade realizada: Definição do aplicativo que será desenvolvido.",
+                    "Aplicação no mercado de trabalho: Planejamento de produtos digitais.",
+                    "Contexto na vida do estudante: Organização de projetos.",
+                    "Meta: Definir o projeto do aplicativo.",
+                    "Bônus: Criação de protótipo em papel.",
+                    "Aula 2 – Estrutura do Projeto",
+                    "Tema: Organização do código do aplicativo",
+                    "Conceito a ser apresentado: Separação de componentes, telas e",
+                    "organização da estrutura do projeto.",
+                    "Atividade realizada: Criação da estrutura inicial do aplicativo com organização",
+                    "de pastas e componentes.",
+                    "Aplicação no mercado de trabalho: Boas práticas de organização em",
+                    "projetos de software.",
+                    "Contexto na vida do estudante: Organização de arquivos e projetos para",
+                    "facilitar manutenção.",
+                    "Meta: Criar uma base organizada para o aplicativo.",
+                    "Bônus: Explorar padrões de organização usados em projetos profissionais.",
+                    "Aula 3 – Formulários e Entrada de Dados",
+                    "Tema: Interação com o usuário",
+                    "Conceito a ser apresentado: Captura de dados do usuário utilizando campos",
+                    "de entrada.",
+                    "Atividade realizada: Criação de um formulário simples para receber",
+                    "informações do usuário.",
+                    "Aplicação no mercado de trabalho: Formulários presentes em aplicativos de",
+                    "cadastro, login ou registro de dados.",
+                    "Contexto na vida do estudante: Preenchimento de formulários em aplicativos",
+                    "e sites.",
+                    "Meta: Permitir que o usuário insira dados no aplicativo.",
+                    "Bônus: Adicionar validação simples nos campos do formulário.",
+                    "Aula 4 – Armazenamento de Dados",
+                    "Tema: Persistência de informações",
+                    "Conceito a ser apresentado: Como armazenar informações dentro do",
+                    "aplicativo.",
+                    "Atividade realizada: Implementação de armazenamento local simples para",
+                    "salvar dados do usuário.",
+                    "Aplicação no mercado de trabalho: Aplicativos que guardam informações do",
+                    "usuário.",
+                    "Contexto na vida do estudante: Aplicativos que salvam tarefas, notas ou",
+                    "preferências.",
+                    "Meta: Permitir que o aplicativo guarde informações.",
+                    "Bônus: Explorar formas de sincronizar dados.",
+                    "Aula 5 – Melhorando a Interface do Aplicativo",
+                    "Tema: Experiência do usuário (UX)",
+                    "Conceito a ser apresentado: Princípios básicos de usabilidade e organização",
+                    "visual.",
+                    "Atividade realizada: Melhoria da interface do aplicativo com ajustes de layout",
+                    "e design.",
+                    "Aplicação no mercado de trabalho: Design de interfaces e experiência do",
+                    "usuário.",
+                    "Contexto na vida do estudante: Aplicativos intuitivos que facilitam o uso no",
+                    "dia a dia.",
+                    "Meta: Criar uma interface mais clara e agradável.",
+                    "Bônus: Explorar bibliotecas de componentes visuais.",
+                    "Aula 6 – Testes e Correção de Problemas",
+                    "Tema: Identificação de erros",
+                    "Conceito a ser apresentado: Processo de teste e depuração (debug) em",
+                    "aplicativos.",
+                    "Atividade realizada: Testes do aplicativo para identificar problemas e corrigir",
+                    "erros.",
+                    "Aplicação no mercado de trabalho: Qualidade de software e manutenção de",
+                    "sistemas.",
+                    "Contexto na vida do estudante: Testar algo antes de entregar ou publicar.",
+                    "Meta: Melhorar a estabilidade e funcionamento do aplicativo.",
+                    "Bônus: Aprender técnicas simples de depuração.",
+                    "Aula 7 – Finalização do Aplicativo",
+                    "Tema: Ajustes finais do projeto",
+                    "Conceito a ser apresentado: Organização final do aplicativo e preparação",
+                    "para apresentação.",
+                    "Atividade realizada: Ajustes finais nas telas, funcionalidades e estrutura do",
+                    "aplicativo.",
+                    "Aplicação no mercado de trabalho: Entrega de projetos digitais.",
+                    "Contexto na vida do estudante: Finalizar um projeto antes de apresentar.",
+                    "Meta: Concluir o aplicativo desenvolvido durante o módulo.",
+                    "Bônus: Personalizar o aplicativo com elementos visuais extras.",
+                    "Aula 8 – Apresentação dos Aplicativos",
+                    "Tema: Demo Day",
+                    "Conceito a ser apresentado: ApreseEntação de projetos digitais.",
+                    "Atividade realizada: Apresentação dos aplicativos desenvolvidos.",
+                    "Aplicação no mercado de trabalho: Apresentação de projetos para clientes",
+                    "ou equipes.",
+                    "Contexto na vida do estudante: Compartilhar projetos e ideias.",
+                    "Meta: Consolidar o aprendizado do curso.",
+                    "Bônus: Orientações sobre carreira em desenvolvimento mobile."
+                  ],
+                  "dias_da_semana": [
+                    "ter",
+                    "qui"
+                  ],
+                  "data_inicio": "2026-04-07",
+                  "data_final": "2026-04-30",
+                  "horario_inicio": "09:00",
+                  "horario_final": "11:30",
+                  "materiais": [
+                    "Tablet"
+                  ],
+                  "formato": "Presencial"
+                }
+              }
+            ]
+          },
+          {
+            "label": "EducaPUD",
+            "steps": [
+              {
+                "title": "EducaPUD: Criação de Games para Sala de Aula",
+                "note": "O EducaPUD é um programa de formação voltado para profissionais da\neducação interessados em explorar o uso de tecnologias e metodologias\ninovadoras em contextos pedagógicos.\nA proposta busca aproximar educadores de ferramentas digitais, estratégias\ncriativas e práticas de aprendizagem ativa que possam ser aplicadas em sala\nde aula. Por meio de oficinas práticas, os participantes experimentam\ndiferentes formatos de ensino que integram tecnologia, criatividade e resolução\nde problemas.\n\nDurante os encontros, os educadores são convidados a vivenciar atividades\ncomo criação de jogos educativos, uso de inteligência artificial, produção\naudiovisual, robótica educacional e outras abordagens que estimulam a\nparticipação dos estudantes e ampliam as possibilidades de aprendizagem.\nO programa incentiva a experimentação, a troca de experiências entre\nprofessores e a adaptação das práticas apresentadas à realidade de cada\nescola.",
+                "meta": {
+                  "objetivos": [
+                    "Aproximar profissionais da educação de tecnologias e metodologias",
+                    "inovadoras, estimulando novas formas de ensinar e aprender em sala de aula.",
+                    "Objetivos Específicos",
+                    "● Apresentar ferramentas digitais aplicáveis ao contexto educacional.",
+                    "● Estimular o uso de metodologias ativas na prática docente.",
+                    "● Desenvolver estratégias criativas para engajamento dos estudantes.",
+                    "● Promover troca de experiências entre educadores.",
+                    "● Incentivar a experimentação de novas práticas pedagógicas."
+                  ],
+                  "carga_horaria": "1 hora e 30 minutos por encontro",
+                  "pre_requisitos": [
+                    "Ser professor"
+                  ],
+                  "conteudo_programatico": [
+                    "Criação de Games para Sala de Aula",
+                    "Descrição da Oficina",
+                    "Neste primeiro encontro do EducaPUD, os participantes serão convidados a",
+                    "explorar o potencial dos jogos como ferramenta pedagógica.",
+                    "A oficina apresenta princípios básicos de gamificação e game design",
+                    "aplicados à educação, demonstrando como jogos podem ser utilizados para",
+                    "estimular participação, colaboração e aprendizagem significativa em diferentes",
+                    "áreas do conhecimento.",
+                    "Durante a atividade, os educadores irão criar protótipos simples de jogos",
+                    "educativos, utilizando materiais acessíveis como papel, cartolina e elementos",
+                    "visuais. O objetivo é mostrar que é possível desenvolver experiências de",
+                    "aprendizagem envolventes sem depender necessariamente de tecnologias",
+                    "complexas.",
+                    "Ao final da oficina, os participantes terão desenvolvido ideias de jogos que",
+                    "podem ser adaptadas para diferentes disciplinas e faixas etárias, ampliando o",
+                    "repertório pedagógico e estimulando novas práticas em sala de aula.",
+                    "Estrutura do Encontro",
+                    "Momento 1 – Jogos e Aprendizagem",
+                    "Tema: O potencial dos jogos na educação",
+                    "Conceito a ser apresentado: Gamificação e aprendizagem baseada em",
+                    "jogos.",
+                    "Atividade realizada: Discussão e análise de exemplos de jogos utilizados em",
+                    "contextos educativos.",
+                    "Aplicação na educação: Uso de jogos para estimular engajamento e",
+                    "participação dos estudantes.",
+                    "Contexto na prática docente: Transformar conteúdos curriculares em",
+                    "desafios e atividades lúdicas.",
+                    "Meta: Compreender como jogos podem apoiar processos de aprendizagem.",
+                    "Bônus: Exploração de exemplos de jogos educativos.",
+                    "Momento 2 – Estrutura de um Jogo Educativo",
+                    "Tema: Elementos de game design",
+                    "Conceito a ser apresentado: Objetivo, regras, desafios e recompensas.",
+                    "Atividade realizada: Planejamento de um jogo educativo relacionado a um",
+                    "conteúdo escolar.",
+                    "Aplicação na educação: Planejamento de atividades gamificadas.",
+                    "Contexto na prática docente: Transformar exercícios em desafios interativos.",
+                    "Meta: Estruturar a ideia de um jogo educativo.",
+                    "Bônus: Exploração de diferentes formatos de jogos.",
+                    "Momento 3 – Prototipagem do Jogo",
+                    "Tema: Construção do jogo",
+                    "Conceito a ser apresentado: Prototipagem rápida de jogos educativos.",
+                    "Atividade realizada: Construção de um protótipo utilizando materiais simples.",
+                    "Aplicação na educação: Criação de atividades lúdicas para sala de aula.",
+                    "Contexto na prática docente: Produção de jogos e recursos didáticos.",
+                    "Meta: Criar um protótipo de jogo educativo.",
+                    "Bônus: Testes e ajustes do jogo criado.",
+                    "Momento 4 – Testes e Aplicação em Sala de Aula",
+                    "Tema: Teste e adaptação do jogo",
+                    "Conceito a ser apresentado: Avaliação e adaptação de jogos educativos.",
+                    "Atividade realizada: Teste coletivo dos jogos criados e discussão sobre",
+                    "aplicação em sala de aula.",
+                    "Aplicação na educação: Implementação de metodologias ativas.",
+                    "Contexto na prática docente: Planejamento de atividades com jogos.",
+                    "Meta: Refletir sobre como aplicar os jogos na prática pedagógica.",
+                    "Bônus: Troca de experiências entre educadores."
+                  ],
+                  "dias_da_semana": [
+                    "qua"
+                  ],
+                  "data_inicio": "2026-04-01",
+                  "data_final": "2026-04-29",
+                  "horario_inicio": "14:00",
+                  "horario_final": "16:00",
+                  "materiais": [
+                    "Tablet"
+                  ],
+                  "formato": "Curso Presencial"
+                }
+              }
+            ]
+          },
+          {
+            "label": "Análise de Dados com Python",
+            "steps": [
+              {
+                "title": "Introdução à Análise de Dados com Python | Módulo III  – Consumo de Dados com API",
+                "note": "O Módulo III – Consumo de Dados com API aprofunda a formação em\nPython aplicada à análise de dados, introduzindo os participantes ao acesso\nautomatizado de informações disponíveis em serviços e plataformas digitais\npor meio de APIs.\nApós desenvolver no módulo anterior fluxos de automação com dados locais,\nos estudantes passam a trabalhar com dados externos e dinâmicos,\ncompreendendo como sistemas se comunicam e como informações podem ser\ncoletadas automaticamente da internet para análise, organização e geração de\nrelatórios.\nAo longo do módulo, os participantes aprendem a fazer requisições, interpretar\nrespostas em formatos como JSON, transformar esses dados em tabelas e\nintegrá-los ao fluxo de análise com Python e Pandas. As atividades reforçam a\nlógica computacional, a leitura estruturada de dados e o uso de APIs como\nrecurso importante para projetos de automação, monitoramento e inteligência\nde dados.\nCom abordagem prática e orientada a projetos, o curso permite que os\nparticipantes desenvolvam um fluxo simples de coleta, tratamento e análise de\n\ndados de API, aproximando a programação de aplicações reais do mundo do\ntrabalho.",
+                "meta": {
+                  "objetivos": [
+                    "Capacitar os participantes para consumir, organizar e analisar dados",
+                    "provenientes de APIs utilizando Python, ampliando a autonomia no uso de",
+                    "fontes externas de dados para automação e análise.",
+                    "Objetivos Específicos",
+                    "● Compreender o que são APIs e como funcionam requisições de dados.",
+                    "● Aprender a consumir dados de APIs com Python.",
+                    "● Interpretar respostas em JSON e transformar dados em estruturas",
+                    "analisáveis.",
+                    "● Integrar dados de API ao uso de Pandas para tratamento e análise.",
+                    "● Desenvolver um fluxo simples de coleta e organização automática de dados",
+                    "externos."
+                  ],
+                  "carga_horaria": "9 horas",
+                  "pre_requisitos": [
+                    "Ter concluído o Módulo II de Python ou possuir conhecimentos",
+                    "básicos de Python, Pandas e organização de dados."
+                  ],
+                  "conteudo_programatico": [
+                    "Conteúdo Programático Geral",
+                    "● O que é API e como sistemas trocam informações",
+                    "● Requisições HTTP básicas com Python",
+                    "● Leitura e interpretação de dados em JSON",
+                    "● Transformação de dados de API em tabelas com Pandas",
+                    "● Limpeza e organização de dados externos",
+                    "● Geração de análises simples a partir de dados consumidos automaticamente",
+                    "● Estruturação de pequenos fluxos de coleta + tratamento + saída",
+                    "Conteúdo Programático por Aula",
+                    "Aula 1 – Primeiros Passos com APIs",
+                    "Tema: Buscar dados fora da planilha",
+                    "Conceito a ser apresentado: O que é uma API, como funcionam requisições",
+                    "e respostas, e como Python pode consumir dados de serviços externos.",
+                    "Conteúdos trabalhados:",
+                    "● O que é API e onde ela aparece no dia a dia",
+                    "● Diferença entre dado local e dado externo",
+                    "● Conceito de requisição e resposta",
+                    "● Introdução ao uso da biblioteca requests",
+                    "● Leitura inicial de dados em formato JSON",
+                    "Atividade realizada: Consumir uma API pública simples, visualizar a resposta",
+                    "recebida e identificar as informações mais importantes no retorno.",
+                    "Aplicação no mercado de trabalho: Integração com sistemas, monitoramento",
+                    "de informações, automação de consultas e coleta de dados em tempo real.",
+                    "Contexto na vida do estudante: Aplicativos que mostram clima, mapas,",
+                    "cotações, notícias ou informações atualizadas automaticamente.",
+                    "Meta da aula: Compreender como Python acessa dados externos por meio de",
+                    "APIs.",
+                    "Bônus: Checklist prático: como saber se uma API é útil para o meu projeto.",
+                    "Aula 2 – Organizando Dados de API com Python e Pandas",
+                    "Tema: Do JSON para a tabela",
+                    "Conceito a ser apresentado: Como interpretar estruturas de dados retornadas",
+                    "por APIs e transformá-las em tabelas prontas para análise.",
+                    "Conteúdos trabalhados:",
+                    "● Estrutura de dicionários e listas em JSON",
+                    "● Seleção de campos relevantes",
+                    "● Transformação de dados em DataFrame",
+                    "● Padronização de colunas e tipos de dados",
+                    "● Limpeza inicial de informações vindas de API",
+                    "Atividade realizada: Consumir dados de uma API pública, selecionar os",
+                    "campos principais e montar uma tabela organizada no Pandas para exploração",
+                    "e leitura.",
+                    "Aplicação no mercado de trabalho: Montagem de bases para dashboards,",
+                    "relatórios automáticos, acompanhamento de indicadores e integração de",
+                    "dados.",
+                    "Contexto na vida do estudante: Transformar informações “bagunçadas” da",
+                    "internet em tabelas compreensíveis e úteis.",
+                    "Meta da aula: Converter dados de API em uma base estruturada para análise.",
+                    "Bônus: Criar uma função simples para repetir automaticamente a coleta e a",
+                    "organização dos dados.",
+                    "Aula 3 – Projeto Final: Coleta e Análise de Dados com API",
+                    "Tema: Automatizar a entrada de dados externos",
+                    "Conceito a ser apresentado: Construção de um fluxo completo de consumo",
+                    "de API, tratamento e análise simples dos dados.",
+                    "Conteúdos trabalhados:",
+                    "● Requisição automatizada",
+                    "● Organização e limpeza dos dados",
+                    "● Geração de análise simples ou tabela-resumo",
+                    "● Exportação da saída para CSV",
+                    "● Estruturação do código para reaproveitamento",
+                    "Atividade realizada: Desenvolvimento de um pequeno projeto final em que o",
+                    "participante consome dados de uma API pública, organiza a base com Pandas",
+                    "e gera uma saída analítica simples.",
+                    "Aplicação no mercado de trabalho: Monitoramento de dados externos,",
+                    "relatórios automatizados, acompanhamento de indicadores e construção de",
+                    "portfólio inicial em dados.",
+                    "Contexto na vida do estudante: Criar soluções que buscam informações",
+                    "atualizadas automaticamente sem depender de copiar e colar dados",
+                    "manualmente.",
+                    "Meta da aula: Entregar um fluxo funcional de coleta, organização e análise de",
+                    "dados com API.",
+                    "Bônus: Próximos passos: autenticação, integração com dashboards e",
+                    "atualização automática de dados."
+                  ],
+                  "dias_da_semana": [
+                    "sex"
+                  ],
+                  "data_inicio": "2026-04-10",
+                  "data_final": "2026-04-24",
+                  "horario_inicio": "15:00",
+                  "horario_final": "18:00",
+                  "materiais": [
+                    "Notebook"
+                  ],
+                  "formato": "Curso presencial"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "eco": {
+        "label": "Economia Criativa",
+        "accentClass": "accent-eco",
+        "lanes": []
+      },
+      "niv": {
+        "label": "Nivelamento",
+        "accentClass": "accent-niv",
+        "lanes": [
+          {
+            "label": "Pacote Adobe – Módulo II",
+            "steps": [
+              {
+                "title": "Formação Pacote Adobe – Módulo II (Photoshop)",
+                "note": "Este curso apresenta os fundamentos da edição e manipulação de imagens digitais\nutilizando o Adobe Photoshop, um dos softwares mais utilizados no mundo para\ntratamento de imagens, design gráfico e produção visual.\nAo longo das aulas, os participantes aprenderão a trabalhar com ferramentas\nessenciais do programa, explorando conceitos como seleção, camadas, ajustes de\ncor, tratamento fotográfico e criação de composições visuais. As atividades práticas\npermitirão compreender como imagens podem ser transformadas, aprimoradas e\nutilizadas em diferentes contextos, como redes sociais, materiais gráficos, projetos\ncriativos e comunicação visual.\nO curso também estimula o desenvolvimento da percepção estética, da criatividade e\nda autonomia na produção de imagens, aproximando os estudantes de práticas\nutilizadas no mercado de trabalho em áreas como design, fotografia, publicidade e\nprodução de conteúdo digital.",
+                "meta": {
+                  "objetivos": [
+                    "Apresentar aos participantes os conceitos, práticas e ferramentas fundamentais da",
+                    "edição e manipulação de imagens digitais, desenvolvendo competências para",
+                    "tratamento fotográfico, criação de composições visuais e produção de peças gráficas",
+                    "utilizando o Adobe Photoshop.",
+                    "Objetivos Específicos",
+                    "● Introduzir os fundamentos da imagem digital e da edição de imagens.",
+                    "● Capacitar os participantes para utilizar o Adobe Photoshop na edição e",
+                    "tratamento fotográfico.",
+                    "● Estimular a percepção estética e a análise crítica de imagens no contexto da",
+                    "comunicação visual.",
+                    "● Promover o uso de ferramentas profissionais para criação de peças gráficas,",
+                    "conteúdos digitais e materiais promocionais."
+                  ],
+                  "carga_horaria": "24 horas (8 aulas de 3h)",
+                  "pre_requisitos": [
+                    "Conhecimentos básicos de informática (uso de mouse, teclado e",
+                    "arquivos). Não é necessário conhecimento prévio em design ou edição de imagens."
+                  ],
+                  "conteudo_programatico": [
+                    "Aula 1 – Introdução ao Photoshop e à Imagem Digital",
+                    "Tema: Fundamentos da edição de imagens",
+                    "Conceito a ser apresentado: O que é imagem digital, diferenças entre bitmap",
+                    "e vetor, resolução e principais usos do Photoshop.",
+                    "Atividade realizada: Exploração da interface do Photoshop e criação do",
+                    "primeiro arquivo de trabalho.",
+                    "Aplicação no mercado de trabalho: Fotografia, design gráfico, marketing",
+                    "digital e produção de conteúdo.",
+                    "Contexto na vida do estudante: Imagens utilizadas em redes sociais,",
+                    "publicidade e comunicação digital.",
+                    "Meta: Compreender o papel do Photoshop na criação e edição de imagens.",
+                    "Bônus:",
+                    "Atalhos essenciais para agilizar o fluxo de trabalho.",
+                    "Aula 2 – Seleções e Recortes de Imagem",
+                    "Tema: Técnicas de seleção e recorte",
+                    "Conceito a ser apresentado:",
+                    "Ferramentas de seleção (laço, seleção rápida, varinha mágica) e isolamento",
+                    "de elementos.",
+                    "Atividade realizada:",
+                    "Recorte de objetos e pessoas para criação de composições simples.",
+                    "Aplicação no mercado de trabalho:",
+                    "Edição fotográfica, publicidade e design de peças digitais.",
+                    "Contexto na vida do estudante:",
+                    "Edição de fotos para redes sociais e apresentações.",
+                    "Meta:",
+                    "Dominar técnicas básicas de seleção e recorte.",
+                    "Bônus:",
+                    "Uso de máscara de camada para ajustes mais precisos.",
+                    "Aula 3 – Camadas e Organização de Projetos",
+                    "Tema: Estruturação de composições visuais",
+                    "Conceito a ser apresentado:",
+                    "Uso de camadas, grupos e organização do arquivo.",
+                    "Atividade realizada:",
+                    "Criação de composição com múltiplos elementos visuais.",
+                    "Aplicação no mercado de trabalho:",
+                    "Design de layouts, banners e materiais gráficos.",
+                    "Contexto na vida do estudante:",
+                    "Organização de projetos visuais complexos.",
+                    "Meta:",
+                    "Construir composições organizadas e editáveis.",
+                    "Bônus:",
+                    "Modos de mesclagem e suas aplicações criativas.",
+                    "Aula 4 – Ajustes de Cor e Tratamento de Imagem",
+                    "Tema: Correção e melhoria visual",
+                    "Conceito a ser apresentado:",
+                    "Brilho, contraste, saturação, balanço de cores e níveis.",
+                    "Atividade realizada:",
+                    "Tratamento de fotografia com correção de cor e iluminação.",
+                    "Aplicação no mercado de trabalho:",
+                    "Fotografia profissional, publicidade e redes sociais.",
+                    "Contexto na vida do estudante:",
+                    "Melhoria estética de imagens pessoais.",
+                    "Meta:",
+                    "Compreender como melhorar visualmente uma fotografia.",
+                    "Bônus:",
+                    "Uso de camadas de ajuste para edição não destrutiva.",
+                    "Aula 5 – Retoque Fotográfico",
+                    "Tema: Correção de imperfeições",
+                    "Conceito a ser apresentado:",
+                    "Ferramentas de carimbo, correção e remoção de objetos.",
+                    "Atividade realizada:",
+                    "Retoque de retrato e limpeza de imagem.",
+                    "Aplicação no mercado de trabalho:",
+                    "Fotografia, moda, publicidade e e-commerce.",
+                    "Contexto na vida do estudante:",
+                    "Edição de fotos pessoais e profissionais.",
+                    "Meta:",
+                    "Aplicar técnicas básicas de retoque.",
+                    "Bônus:",
+                    "Uso da ferramenta Content Aware.",
+                    "Aula 6 – Tipografia e Design para Redes Sociais",
+                    "Tema: Texto e composição visual",
+                    "Conceito a ser apresentado:",
+                    "Uso de tipografia, hierarquia visual e composição gráfica.",
+                    "Atividade realizada:",
+                    "Criação de arte para redes sociais.",
+                    "Aplicação no mercado de trabalho:",
+                    "Marketing digital e criação de conteúdo.",
+                    "Contexto na vida do estudante:",
+                    "Produção de posts e divulgação de projetos pessoais.",
+                    "Meta:",
+                    "Integrar imagem e texto de forma clara e atrativa.",
+                    "Bônus:",
+                    "Uso de estilos de camada.",
+                    "Aula 7 – Montagem e Manipulação de Imagens",
+                    "Tema: Composição criativa",
+                    "Conceito a ser apresentado:",
+                    "Fotomontagem e integração de diferentes imagens.",
+                    "Atividade realizada:",
+                    "Criação de uma montagem criativa combinando múltiplos elementos.",
+                    "Aplicação no mercado de trabalho:",
+                    "Publicidade, arte digital e design criativo.",
+                    "Contexto na vida do estudante:",
+                    "Exploração da criatividade visual.",
+                    "Meta:",
+                    "Criar composições visuais impactantes.",
+                    "Bônus:",
+                    "Uso de sombras e integração de elementos.",
+                    "Aula 8 – Criação de Peças Gráficas",
+                    "Tema: Design aplicado",
+                    "Conceito a ser apresentado:",
+                    "Criação de layouts para cartazes, banners e materiais promocionais.",
+                    "Atividade realizada:",
+                    "Desenvolvimento de uma peça gráfica completa.",
+                    "Aplicação no mercado de trabalho:",
+                    "Comunicação visual, eventos e publicidade.",
+                    "Contexto na vida do estudante:",
+                    "Divulgação de projetos pessoais ou empreendimentos.",
+                    "Meta:",
+                    "Aplicar princípios de design em projetos reais.",
+                    "Bônus:",
+                    "Uso de mockups simples."
+                  ],
+                  "dias_da_semana": [
+                    "seg",
+                    "qua"
+                  ],
+                  "data_inicio": "2026-04-07",
+                  "data_final": "2026-04-29",
+                  "horario_inicio": "09:00",
+                  "horario_final": "12:00",
+                  "materiais": [
+                    "Notebook"
+                  ],
+                  "formato": "Curso presencial"
+                }
+              }
+            ]
+          },
+          {
+            "label": "Criar Conteúdo com IA",
+            "steps": [
+              {
+                "title": "Novas Formas de Criar Conteúdo com IA: Da Imagem  Gerada à Peça Visual",
+                "note": "Esta oficina apresenta novas formas de criar conteúdo visual utilizando\nferramentas de inteligência artificial, explorando um processo criativo que\ncomeça pela geração de imagens e ideias visuais, em vez da criação direta\nde peças prontas.\nOs participantes aprendem a utilizar IA para gerar imagens conceituais,\nexplorar estilos visuais e criar composições que depois podem ser editadas,\nadaptadas e transformadas em peças de comunicação.\nA proposta da oficina é mostrar que a IA pode funcionar como ferramenta de\nideação e criação visual, permitindo que os criadores desenvolvam conteúdos\nmais autorais e criativos.\n\nDurante os encontros, os estudantes irão gerar imagens com IA, explorar\ndiferentes estilos, realizar edições e transformar essas imagens em materiais\nvisuais como posts, cartazes ou capas.",
+                "meta": {
+                  "objetivos": [
+                    "Apresentar novas possibilidades de criação de conteúdo visual utilizando",
+                    "inteligência artificial, estimulando o uso da IA como ferramenta de criação de",
+                    "imagens e experimentação estética.",
+                    "Objetivos Específicos",
+                    "● Compreender como funcionam ferramentas de geração de imagens com IA.",
+                    "● Desenvolver habilidades de criação de prompts para gerar imagens.",
+                    "● Explorar estilos visuais e experimentação criativa.",
+                    "● Editar imagens geradas por IA para criação de conteúdos visuais."
+                  ],
+                  "carga_horaria": "6 horas (4 encontros de 1h30)",
+                  "pre_requisitos": [
+                    "Conhecimentos básicos de informática."
+                  ],
+                  "conteudo_programatico": [
+                    "Conteúdo Programático",
+                    "Aula 1 – IA como Ferramenta Criativa",
+                    "Tema: Criando imagens com inteligência artificial",
+                    "Conceito a ser apresentado: Como funcionam as ferramentas de geração de",
+                    "imagens com IA e o conceito de prompt.",
+                    "Atividade realizada: Criação das primeiras imagens com IA explorando",
+                    "diferentes estilos visuais.",
+                    "Aplicação no mercado de trabalho: Design gráfico, marketing digital, criação",
+                    "de conteúdo e publicidade.",
+                    "Contexto na vida do estudante: Imagens criativas usadas em redes sociais e",
+                    "projetos visuais.",
+                    "Meta: Aprender a gerar imagens utilizando prompts.",
+                    "Bônus: Explorar diferentes estilos visuais (realista, ilustração, 3D, cartoon).",
+                    "Aula 2 – Criando Direção Visual com IA",
+                    "Tema: Estilo e identidade visual",
+                    "Conceito a ser apresentado: Como utilizar prompts para direcionar estilo,",
+                    "cenário, iluminação e composição.",
+                    "Atividade realizada: Criação de séries de imagens com diferentes estilos para",
+                    "um mesmo tema.",
+                    "Aplicação no mercado de trabalho: Direção de arte, design e produção",
+                    "visual.",
+                    "Contexto na vida do estudante: Construção de identidade visual para redes",
+                    "sociais.",
+                    "Meta: Aprender a controlar o estilo das imagens geradas.",
+                    "Bônus: Criação de um banco de imagens autorais.",
+                    "Aula 3 – Editando Imagens Geradas por IA",
+                    "Tema: Transformando imagens em conteúdo",
+                    "Conceito a ser apresentado: Como editar imagens geradas utilizando",
+                    "ferramentas de design.",
+                    "Atividade realizada: Edição das imagens geradas para criar posts ou peças",
+                    "visuais.",
+                    "Aplicação no mercado de trabalho: Design gráfico e criação de conteúdo",
+                    "digital.",
+                    "Contexto na vida do estudante: Produção de conteúdo para redes sociais.",
+                    "Meta: Aprender a transformar imagens geradas em peças visuais.",
+                    "Bônus: Explorar ferramentas simples de edição.",
+                    "Aula 4 – Criando Conteúdo Visual com IA",
+                    "Tema: Do conceito à peça final",
+                    "Conceito a ser apresentado: Processo criativo completo: ideia, imagem",
+                    "gerada e edição.",
+                    "Atividade realizada: Criação de uma peça visual utilizando imagens geradas e",
+                    "editadas.",
+                    "Aplicação no mercado de trabalho: Marketing digital, design e comunicação",
+                    "visual.",
+                    "Contexto na vida do estudante: Criação de conteúdo autoral para projetos",
+                    "pessoais.",
+                    "Meta: Produzir um conteúdo visual completo utilizando IA.",
+                    "Bônus: Orientações sobre criação de portfólio com imagens geradas."
+                  ],
+                  "dias_da_semana": [
+                    "seg"
+                  ],
+                  "data_inicio": "2026-04-06",
+                  "data_final": "2026-05-05",
+                  "horario_inicio": "10:30",
+                  "horario_final": "12:00",
+                  "materiais": [
+                    "Notebook."
+                  ],
+                  "formato": "Curso Presencial"
+                }
+              }
+            ]
+          },
+          {
+            "label": "Preparação Digital",
+            "steps": [
+              {
+                "title": "Preparação Digital para o Mundo do Trabalho",
+                "note": "Este curso tem como objetivo preparar os participantes para os desafios do\nmundo do trabalho na era digital, desenvolvendo competências tecnológicas,\ncomunicacionais e organizacionais necessárias para diferentes contextos\nprofissionais.\nAo longo da formação, os estudantes aprendem a utilizar ferramentas digitais\nessenciais para o trabalho, produzir documentos profissionais, organizar\ninformações, comunicar-se em ambientes digitais e compreender práticas\nbásicas de produtividade e colaboração.\nO curso também aborda temas como elaboração de currículo, presença\nprofissional na internet, comportamento em ambientes de trabalho e uso\nconsciente das tecnologias digitais.\n\nAs atividades são orientadas por situações práticas que simulam contextos\nprofissionais, permitindo que os participantes desenvolvam habilidades\naplicáveis ao cotidiano do trabalho e à construção de sua trajetória profissional.",
+                "meta": {
+                  "objetivos": [
+                    "Desenvolver competências digitais e profissionais que auxiliem os participantes",
+                    "na preparação para o mundo do trabalho.",
+                    "Objetivos Específicos",
+                    "● Desenvolver habilidades básicas de uso de ferramentas digitais.",
+                    "● Produzir documentos profissionais como currículo e apresentações.",
+                    "● Compreender práticas de comunicação digital no ambiente profissional.",
+                    "● Estimular organização, planejamento e colaboração em projetos."
+                  ],
+                  "carga_horaria": "07 horas e 30 min. ( 03 aulas de 2 horas e 30 minutos)",
+                  "pre_requisitos": [
+                    "Não há pré-requisitos."
+                  ],
+                  "conteudo_programatico": [
+                    "Módulo I – Fundamentos Digitais para o Trabalho (8 aulas)",
+                    "Aula 1 – O Mundo do Trabalho na Era Digital",
+                    "Tema: Transformações no trabalho",
+                    "Conceito a ser apresentado: Como a tecnologia transformou profissões e",
+                    "formas de trabalho.",
+                    "Atividade realizada: Discussão sobre profissões atuais e habilidades digitais",
+                    "necessárias.",
+                    "Aplicação no mercado de trabalho: Todas as áreas profissionais utilizam",
+                    "ferramentas digitais.",
+                    "Contexto na vida do estudante: Uso de tecnologia no cotidiano e nas",
+                    "atividades escolares.",
+                    "Meta: Compreender a importância das competências digitais.",
+                    "Bônus: Exploração de profissões emergentes.",
+                    "Aula 2 – Produção de Documentos",
+                    "Tema: Criação de textos profissionais",
+                    "Conceito a ser apresentado: Uso de editores de texto para produção de",
+                    "documentos.",
+                    "Atividade realizada: Criação de um documento profissional simples.",
+                    "Aplicação no mercado de trabalho: Produção de relatórios e documentos.",
+                    "Contexto na vida do estudante: Produção de trabalhos escolares.",
+                    "Meta: Aprender a criar documentos organizados.",
+                    "Bônus: Uso de formatação avançada.",
+                    "Aula 3 – Planilhas Básicas",
+                    "Tema: Organização de informações",
+                    "Conceito a ser apresentado:",
+                    "Uso de planilhas para organizar dados.",
+                    "Atividade realizada: Criação de uma planilha simples.",
+                    "Aplicação no mercado de trabalho: Controle de dados e organização de",
+                    "informações.",
+                    "Contexto na vida do estudante: Organização de tarefas ou gastos.",
+                    "Meta: Compreender o uso básico de planilhas.",
+                    "Bônus: Introdução a fórmulas simples.",
+                    "Módulo II – Construindo a Trajetória Profissional",
+                    "Aula 1 – Comunicação Digital Profissional",
+                    "Tema: Comunicação online",
+                    "Conceito a ser apresentado: Boas práticas em e-mails e comunicação digital.",
+                    "Atividade realizada: Simulação de comunicação profissional.",
+                    "Aplicação no mercado de trabalho: Comunicação corporativa.",
+                    "Contexto na vida do estudante: Comunicação em ambientes digitais.",
+                    "Meta: Desenvolver comunicação digital adequada.",
+                    "Bônus: Etiqueta digital.",
+                    "Aula 2 – Apresentações Digitais",
+                    "Tema: Comunicação visual",
+                    "Conceito a ser apresentado: Criação de apresentações visuais.",
+                    "Atividade realizada: Produção de uma apresentação simples.",
+                    "Aplicação no mercado de trabalho: Apresentações profissionais.",
+                    "Contexto na vida do estudante: Apresentações escolares.",
+                    "Meta: Criar apresentações claras e organizadas.",
+                    "Bônus: Uso de imagens e elementos visuais.",
+                    "Aula 3 – Ferramentas de Produtividade",
+                    "Tema: Organização de tarefas",
+                    "Conceito a ser apresentado: Ferramentas digitais para organização de",
+                    "atividades.",
+                    "Atividade realizada: Criação de lista de tarefas e planejamento semanal.",
+                    "Aplicação no mercado de trabalho: Gestão de tempo e produtividade.",
+                    "Contexto na vida do estudante: Organização de estudos e atividades.",
+                    "Meta: Melhorar a organização pessoal.",
+                    "Bônus: Exploração de aplicativos de produtividade.",
+                    "Aula 4 – Presença Profissional Online",
+                    "Tema: Identidade digital",
+                    "Conceito a ser apresentado: Uso profissional das redes sociais.",
+                    "Atividade realizada: Análise de perfis digitais profissionais.",
+                    "Aplicação no mercado de trabalho: Networking e presença online.",
+                    "Contexto na vida do estudante: Uso de redes sociais.",
+                    "Meta: Compreender a importância da reputação digital.",
+                    "Bônus: Introdução ao LinkedIn.",
+                    "Aula 5 – Pesquisa de Oportunidades",
+                    "Tema: Busca de emprego",
+                    "Conceito a ser apresentado: Como pesquisar vagas e oportunidades.",
+                    "Atividade realizada: Simulação de busca de vagas.",
+                    "Aplicação no mercado de trabalho: Processos de recrutamento.",
+                    "Contexto na vida do estudante: Primeiro emprego ou estágio.",
+                    "Meta: Aprender a encontrar oportunidades.",
+                    "Bônus: Sites e plataformas de emprego."
+                  ],
+                  "dias_da_semana": [
+                    "sex"
+                  ],
+                  "data_inicio": "2026-04-10",
+                  "data_final": "2026-04-24",
+                  "horario_inicio": "09:00",
+                  "horario_final": "11:30",
+                  "materiais": [
+                    "Notbook"
+                  ],
+                  "formato": "Curso presencial"
+                }
+              }
             ]
           }
         ]
       }
     }
   },
-
-  jovens_adultos: {
-    label: "Jovens e Adultos",
-    description: "Trilhas para aprofundamento técnico, portfólio e projetos aplicados.",
-    areas: {
-      audiovisual: {
-        label: "Audiovisual",
-        accentClass: "accent-audiovisual",
-        lanes: [
+  "seniors": {
+    "label": "Seniors",
+    "description": "Espaço reservado para trilhas específicas. Você pode preencher os cursos aqui.",
+    "areas": {
+      "audiovisual": {
+        "label": "Audiovisual",
+        "accentClass": "accent-audiovisual",
+        "lanes": []
+      },
+      "design": {
+        "label": "Design e Marketing",
+        "accentClass": "accent-design",
+        "lanes": []
+      },
+      "prog": {
+        "label": "Programação e Games",
+        "accentClass": "accent-prog",
+        "lanes": [
           {
-            label: "Cinema (sequência por módulos)",
-            steps: [
-              { title: "Fundamentos do Cinema Módulo 1", note: "Introdução ao audiovisual e linguagem." },
-              { title: "Fundamentos do Cinema Módulo 2", note: "Aprofundamento em narrativa e prática." },
-              { title: "Fundamentos do Cinema Módulo 3", note: "Projeto e consolidação de técnicas." }
-            ]
-          },
-          {
-            label: "Fotografia (progressão por níveis)",
-            steps: [
-              { title: "Fotografia em Estúdio 1", note: "Luz básica, enquadramento e prática." },
-              { title: "Fotografia em Estúdio 2", note: "Controle de luz e direção." },
-              { title: "Fotografia em Estúdio 3", note: "Ensaios e resultados avançados." },
-              { title: "Fotografia Externa", note: "Luz natural, locação e narrativa visual." }
-            ]
-          },
-          {
-            label: "Set e operação",
-            steps: [
-              { title: "Assistente de Câmera", note: "Rotina de set, apoio e organização técnica." }
+            "label": "Conexão Sênior",
+            "steps": [
+              {
+                "title": "Conexão Sênior: Oficinas de Inclusão Digital e  Tecnologia para Pessoas Idosas",
+                "note": "O Conexão Sênior é um programa de oficinas voltado para pessoas idosas\nque desejam desenvolver habilidades digitais e explorar o uso de tecnologias\nno cotidiano.\nAs oficinas são estruturadas de forma acessível e prática, respeitando o ritmo\nde aprendizagem dos participantes e priorizando atividades que estimulem a\nautonomia, a confiança e a socialização.\nDurante os encontros, os participantes aprendem a utilizar recursos básicos de\nsmartphones e aplicativos, além de explorar ferramentas digitais que podem\nfacilitar a comunicação com familiares, o acesso a informações e a participação\nem atividades culturais e sociais.\nA proposta busca promover inclusão digital, bem-estar e troca de experiências,\ncriando um ambiente acolhedor onde os participantes podem aprender,\n\ncompartilhar histórias e experimentar novas possibilidades de uso da\ntecnologia.",
+                "meta": {
+                  "objetivos": [
+                    "Promover a inclusão digital de pessoas idosas por meio de oficinas práticas",
+                    "que estimulem o uso consciente e autônomo da tecnologia no cotidiano.",
+                    "Objetivos Específicos",
+                    "● Desenvolver habilidades básicas no uso de smartphones e aplicativos.",
+                    "● Estimular a comunicação digital com familiares e amigos.",
+                    "● Apresentar ferramentas digitais úteis para o cotidiano.",
+                    "● Promover interação social e troca de experiências entre os participantes."
+                  ],
+                  "carga_horaria": "3 oficinas (9 horas)",
+                  "pre_requisitos": [
+                    "Nenhum"
+                  ],
+                  "conteudo_programatico": [
+                    "Oficina 1 – Primeiros Passos no Mundo Digital",
+                    "Tema: Conhecendo o smartphone",
+                    "Conceito a ser apresentado: Funções básicas do celular e navegação no",
+                    "aparelho.",
+                    "Atividade realizada: Exploração das funções básicas do smartphone, como",
+                    "abrir aplicativos, ajustar volume e usar a câmera.",
+                    "Aplicação no cotidiano: Uso do celular para comunicação e registro de",
+                    "momentos.",
+                    "Contexto na vida dos participantes: Utilização do celular para conversar com",
+                    "familiares e amigos.",
+                    "Meta: Compreender as principais funções do smartphone.",
+                    "Bônus: Dicas para facilitar o uso do celular.",
+                    "Oficina 2 – Comunicação e Redes Sociais",
+                    "Tema: Conectando-se com outras pessoas",
+                    "Conceito a ser apresentado: Uso de aplicativos de mensagens e redes",
+                    "sociais.",
+                    "Atividade realizada: Envio de mensagens, fotos e áudios em aplicativos de",
+                    "comunicação.",
+                    "Aplicação no cotidiano: Comunicação com familiares e grupos de amigos.",
+                    "Contexto na vida dos participantes: Compartilhamento de momentos e",
+                    "conversas digitais.",
+                    "Meta: Utilizar aplicativos de comunicação com mais autonomia.",
+                    "Bônus: Criação de grupos e envio de mensagens de voz.",
+                    "Oficina 3 – Tecnologia para o Dia a Dia",
+                    "Tema: Serviços e recursos digitais",
+                    "Conceito a ser apresentado: Uso de aplicativos úteis para o cotidiano.",
+                    "Atividade realizada: Exploração de aplicativos como mapas, previsão do",
+                    "tempo e busca de informações.",
+                    "Aplicação no cotidiano: Planejamento de atividades e acesso a informações.",
+                    "Contexto na vida dos participantes: Uso do celular para facilitar tarefas do",
+                    "dia a dia.",
+                    "Meta: Explorar novas possibilidades de uso da tecnologia.",
+                    "Bônus: Descoberta de aplicativos de interesse dos participantes."
+                  ],
+                  "dias_da_semana": [
+                    "sex"
+                  ],
+                  "data_inicio": "2026-04-10",
+                  "data_final": "2026-04-24",
+                  "horario_inicio": "15:00",
+                  "horario_final": "18:00",
+                  "materiais": [
+                    "Tablet"
+                  ],
+                  "formato": "Presencial"
+                }
+              }
             ]
           }
         ]
       },
-
-      design: {
-        label: "Design e Marketing",
-        accentClass: "accent-design",
-        lanes: [
-          {
-            label: "Pacote Adobe (trilha por ferramentas)",
-            steps: [
-              { title: "Pacote Adobe - Illustrator", note: "Vetores, identidade visual e layout." },
-              { title: "Pacote Adobe - Photoshop", note: "Edição, composição e tratamento." },
-              { title: "Pacote Adobe - InDesign", note: "Diagramação e materiais editoriais." },
-              { title: "Pacote Adobe - Lightroom", note: "Fluxo de edição e organização fotográfica." }
-            ]
-          }
-        ]
+      "eco": {
+        "label": "Economia Criativa",
+        "accentClass": "accent-eco",
+        "lanes": []
       },
-
-      prog: {
-        label: "Programação e Games",
-        accentClass: "accent-prog",
-        lanes: [
-          {
-            label: "Criação de jogos (do conceito ao produto)",
-            steps: [
-              { title: "Narrativas RPG", note: "Construção de mundos, personagens e progressão." },
-              { title: "Construção de Jogo de Tabuleiro", note: "Mecânicas, regras e prototipagem." },
-              { title: "Construção de Jogos para Celulares", note: "Design e desenvolvimento para mobile." }
-            ]
-          },
-          {
-            label: "Dados e ferramentas",
-            steps: [
-              { title: "Análise de Dados com Python Módulo 1", note: "Introdução a dados com Python." },
-              { title: "Análise de Dados com Python Módulo 2", note: "Aprofundamento e prática aplicada." },
-              { title: "Universo das API's", note: "Integrações e consumo de dados." },
-              { title: "PowerBI", note: "Dashboards e visualização de dados." }
-            ]
-          }
-        ]
+      "niv": {
+        "label": "Nivelamento",
+        "accentClass": "accent-niv",
+        "lanes": []
       }
     }
   },
-
-  seniors: {
-    label: "Seniors",
-    description: "Espaço reservado para trilhas específicas. Você pode preencher os cursos aqui.",
-    areas: {
-      audiovisual: { label: "Audiovisual", accentClass:"accent-audiovisual", lanes: [] },
-      design:      { label: "Design e Marketing", accentClass:"accent-design", lanes: [] },
-      prog:        { label: "Programação e Games", accentClass:"accent-prog", lanes: [] }
-    }
-  },
-
-  nivelamento: {
-    label: "Nivelamento",
-    description: "Cursos de entrada e revisão para preparar participantes para trilhas avançadas.",
-    areas: {
-      audiovisual: { label: "Audiovisual", accentClass:"accent-audiovisual", lanes: [] },
-      design:      { label: "Design e Marketing", accentClass:"accent-design", lanes: [] },
-      prog:        { label: "Programação e Games", accentClass:"accent-prog", lanes: [] }
+  "nivelamento": {
+    "label": "Nivelamento",
+    "description": "Cursos de entrada e revisão para preparar participantes para trilhas avançadas.",
+    "areas": {
+      "audiovisual": {
+        "label": "Audiovisual",
+        "accentClass": "accent-audiovisual",
+        "lanes": []
+      },
+      "design": {
+        "label": "Design e Marketing",
+        "accentClass": "accent-design",
+        "lanes": []
+      },
+      "prog": {
+        "label": "Programação e Games",
+        "accentClass": "accent-prog",
+        "lanes": []
+      },
+      "eco": {
+        "label": "Economia Criativa",
+        "accentClass": "accent-eco",
+        "lanes": []
+      },
+      "niv": {
+        "label": "Nivelamento",
+        "accentClass": "accent-niv",
+        "lanes": []
+      }
     }
   }
 };
 
 window.PUD_AREA_LABEL = {
-  audiovisual: "Audiovisual",
-  design: "Design e Marketing",
-  prog: "Programação e Games"
+  "audiovisual": "Audiovisual",
+  "design": "Design e Marketing",
+  "prog": "Programação e Games",
+  "eco": "Economia Criativa",
+  "niv": "Nivelamento"
 };
