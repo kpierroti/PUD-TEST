@@ -464,12 +464,12 @@ footer{
   margin-top: 18px;
 }
 
-/* Acentos por área (usa --accent no card) */
+
 .accent-audiovisual { --accent: var(--accent-audio); }
 .accent-design      { --accent: var(--accent-design); }
 .accent-prog        { --accent: var(--accent-prog); }
 
-/* brilho discreto no card usando a cor do acento */
+
 .areaCard::after{
   content:"";
   position:absolute; inset:-2px;
@@ -491,7 +491,7 @@ footer{
   border-color: color-mix(in srgb, var(--accent) 35%, rgba(255,255,255,.12));
 }
 
-/* Empty state */
+
 .empty{
   margin-top: 18px;
   border:1px solid rgba(255,255,255,.12);
@@ -500,4 +500,44 @@ footer{
   padding: 16px;
   color: var(--muted);
   line-height:1.5;
+}
+
+
+.desc{
+line-height:1.5;
+transition:all .3s ease;
+}
+
+.desc.collapsed{
+max-height:120px;
+overflow:hidden;
+position:relative;
+}
+
+.desc.collapsed::after{
+content:"";
+position:absolute;
+bottom:0;
+left:0;
+right:0;
+height:40px;
+background:linear-gradient(to bottom, transparent, var(--bg));
+}
+
+.linkBtn{
+background:none;
+border:none;
+color:var(--accent);
+cursor:pointer;
+margin-top:8px;
+font-size:0.9rem;
+}
+
+.linkBtn:hover{
+text-decoration:underline;
+}
+
+.btn.secondary{
+background:transparent;
+border:1px solid var(--accent);
 }
