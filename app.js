@@ -47,20 +47,49 @@
     return results;
   }
 
-  function openModal({ title, note, track, area, lane }) {
-    $("#mTitle").textContent = title;
-    $("#mSub").textContent = note || "Você pode preencher uma descrição completa depois.";
-    $("#mTrack").textContent = track;
-    $("#mArea").textContent = area;
-    $("#mLane").textContent = lane;
-    $("#mObs").textContent =
-      "Dica: inclua aqui objetivos, carga horária, pré-requisitos, materiais e formato.";
+  function openModal({ step, track, area, lane }) {
 
-    const dlg = $("#dlg");
-    if (typeof dlg.showModal === "function") dlg.showModal();
-    else alert(title);
+  $("#mTitle").textContent = step.title;
+
+  $("#mSub").textContent =
+    step.note || "Descrição do curso.";
+
+  $("#mTrack").textContent = track;
+
+  $("#mArea").textContent = area;
+
+  $("#mLane").textContent = lane;
+
+  const meta = step.meta || {};
+
+  $("#mCarga").textContent =
+    meta.carga_horaria || "—";
+
+  if (meta.data_inicio && meta.data_final) {
+    $("#mDatas").textContent =
+      `${meta.data_inicio} → ${meta.data_final}`;
+  } else {
+    $("#mDatas").textContent = "—";
   }
 
+  if (meta.horario_inicio && meta.horario_final) {
+    $("#mHorario").textContent =
+      `${meta.horario_inicio} - ${meta.horario_final}`;
+  } else {
+    $("#mHorario").textContent = "—";
+  }
+
+  $("#mFormato").textContent =
+    meta.formato || "—";
+
+  $("#mObs").textContent =
+    step.note || "";
+
+  const dlg = $("#dlg");
+
+  if (typeof dlg.showModal === "function") dlg.showModal();
+  else alert(step.title);
+}
   function render() {
     const trackObj = DATA[state.track];
     $("#headline").textContent = trackObj.label;
