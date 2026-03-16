@@ -13,11 +13,21 @@ q: ""
 };
 
 function normalize(str){
+
 return (str || "")
 .toLowerCase()
 .normalize("NFD")
 .replace(/[\u0300-\u036f]/g,"")
 .trim();
+
+}
+
+function safeText(id,value){
+
+const el = $(id);
+
+if(el) el.textContent = value || "—";
+
 }
 
 function getFiltered(){
@@ -31,6 +41,7 @@ for(const [areaKey,areaObj] of Object.entries(trackObj.areas)){
 if(state.area !== "all" && state.area !== areaKey) continue;
 
 const lanes = (areaObj.lanes || [])
+
 .map(l=>{
 
 const steps = (l.steps || []).filter(step=>{
@@ -46,10 +57,13 @@ return hay.includes(qn);
 return {...l,steps};
 
 })
+
 .filter(l=>l.steps.length>0);
 
 if(lanes.length>0){
+
 results.push({areaKey,areaObj,lanes});
+
 }
 
 }
@@ -58,65 +72,96 @@ return results;
 
 }
 
-function safeText(id,value){
-
-const el = $(id);
-
-if(el) el.textContent = value || "—";
-
-}
-
 function openModal({step,track,area,lane}){
 
 const meta = step.meta || {};
 
 safeText("#mTitle",step.title);
-
-safeText("#mSub",step.note);
-
 safeText("#mTrack",track);
-
 safeText("#mArea",area);
-
 safeText("#mLane",lane);
-
 safeText("#mCarga",meta.carga_horaria);
 
 if(meta.data_inicio && meta.data_final){
+
 safeText("#mDatas",`${meta.data_inicio} → ${meta.data_final}`);
-}else{
-safeText("#mDatas","—");
+
 }
 
 if(meta.horario_inicio && meta.horario_final){
+
 safeText("#mHorario",`${meta.horario_inicio} - ${meta.horario_final}`);
-}else{
-safeText("#mHorario","—");
+
 }
 
 safeText("#mFormato",meta.formato);
 
-safeText("#mObs",step.note);
+
+const desc = $("#mObs");
+
+desc.textContent = step.note || "";
+desc.classList.add("collapsed");
+
+$("#toggleDesc").textContent = "Ver mais";
+
+
+$("#toggleDesc").onclick = ()=>{
+
+desc.classList.toggle("collapsed");
+
+$("#toggleDesc").textContent =
+desc.classList.contains("collapsed")
+? "Ver mais"
+: "Ver menos";
+
+};
+
+
+/* BOTÃO EMENTA */
+
+$("#ementaBtn").onclick = ()=>{
+
+const conteudo = meta.conteudo_programatico || [];
+
+let html = "<h3>Ementa completa</h3>";
+
+conteudo.forEach(l=>{
+
+html += `<p>${l}</p>`;
+
+});
+
+const win = window.open("","ementa","width=700,height=800");
+
+win.document.write(`
+<html>
+<head>
+<title>Ementa</title>
+<style>
+body{
+font-family:system-ui;
+padding:30px;
+line-height:1.6;
+}
+h3{
+margin-bottom:20px;
+}
+</style>
+</head>
+<body>
+${html}
+</body>
+</html>
+`);
+
+};
+
+
+/* ABRIR MODAL */
 
 const dlg = $("#dlg");
 
-if(!dlg) return;
-
-try{
-
-if(typeof dlg.showModal === "function"){
-dlg.showModal();
-}else{
-dlg.style.display="block";
-}
-
-}catch(err){
-
-console.error(err);
-
-dlg.style.display="block";
-
-}
+if(dlg.showModal) dlg.showModal();
 
 }
 
@@ -157,17 +202,29 @@ const stepCount = lanes.reduce((acc,l)=>acc+(l.steps?.length||0),0);
 
 card.innerHTML = `
 <div class="areaHeader">
+
 <div class="areaTitle">
+
 <span class="spark"></span>
+
 <div style="min-width:0">
+
 <h3>${areaObj.label}</h3>
-<div class="meta">${laneCount} trilha(s) • ${stepCount} curso(s)</div>
+
+<div class="meta">
+${laneCount} trilha(s) • ${stepCount} curso(s)
 </div>
+
+</div>
+
 </div>
 
 <span class="chip">
+
 <span style="width:8px;height:8px;border-radius:999px;background:var(--accent);display:inline-block"></span>
+
 ${trackObj.label}
+
 </span>
 
 </div>
@@ -190,9 +247,9 @@ const header = document.createElement("div");
 header.className="connector";
 
 header.innerHTML = `
-<div style="white-space:nowrap;"><strong>${lane.label}</strong></div>
+<div><strong>${lane.label}</strong></div>
 <div class="line"></div>
-<div style="white-space:nowrap;">sequência sugerida</div>
+<div>sequência sugerida</div>
 `;
 
 laneBox.appendChild(header);
@@ -207,19 +264,22 @@ const el = document.createElement("div");
 
 el.className="step";
 
-el.dataset.accent="1";
-
 el.style.setProperty("--accent",accent);
 
 el.innerHTML=`
+
 <div class="stepTop">
+
 <span class="tag">${AREA_LABEL[areaKey]}</span>
+
 <span class="tag">Etapa ${i+1}</span>
+
 </div>
 
 <h4>${step.title}</h4>
 
 <p>${step.note || "Clique para ver detalhes."}</p>
+
 `;
 
 el.addEventListener("click",()=>{
@@ -281,66 +341,19 @@ state.area = e.target.value;
 render();
 });
 
-const dlg = $("#dlg");
-
-if($("#closeBtn")){
-$("#closeBtn").addEventListener("click",()=>dlg.close());
-}
-
-if(dlg){
-
-dlg.addEventListener("click",e=>{
-
-const rect = e.currentTarget.getBoundingClientRect();
-
-const inDialog =
-rect.top <= e.clientY &&
-e.clientY <= rect.bottom &&
-rect.left <= e.clientX &&
-e.clientX <= rect.right;
-
-if(!inDialog) dlg.close();
-
-});
-
-}
+$("#closeBtn").addEventListener("click",()=>$("#dlg").close());
 
 $("#copyBtn").addEventListener("click",async()=>{
 
 const text = $("#mTitle").textContent || "";
 
-try{
-
 await navigator.clipboard.writeText(text);
-
-$("#copyBtn").textContent="Copiado";
-
-setTimeout(()=>{
-$("#copyBtn").textContent="Copiar nome do curso";
-},1200);
-
-}catch{
-
-const ta = document.createElement("textarea");
-
-ta.value=text;
-
-document.body.appendChild(ta);
-
-ta.select();
-
-document.execCommand("copy");
-
-document.body.removeChild(ta);
-
-}
 
 });
 
 }
 
 bindEvents();
-
 render();
 
 })();
